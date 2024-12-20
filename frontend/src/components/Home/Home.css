@@ -1,0 +1,38 @@
+/* Home.css */
+
+.home-container {
+  background-color: #f7fafc; /* Light gray background */
+}
+
+.hero-section {
+  padding: 2rem; /* Padding for the section */
+}
+
+.hero-title {
+  color: #4A5568; /* Dark gray for the title */
+}
+
+.hero-description {
+  color: #718096; /* Medium gray for description text */
+}
+
+.quote {
+  font-style: italic; /* Italic style for the quote */
+  color: #6B46C1; /* Purple color for the quote */
+  margin: 1rem 0; /* Margin above and below the quote */
+}
+
+.locations {
+  margin-top: 1rem; /* Margin above locations */
+}
+
+.location-list {
+  list-style: none; /* Remove default list styling */
+  padding-left: 0; /* Remove left padding */
+  color: #4A5568; /* Dark gray for location text */
+}
+
+.location-list li {
+  display: inline; /* Inline display for location items */
+  margin-right: 1rem; /* Margin to the right for spacing */
+}

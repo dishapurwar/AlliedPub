@@ -1,0 +1,140 @@
+/* Featured Author Styling */
+.featured-author {
+  width: 100%;
+  min-height: 100vh;
+  /* background: radial-gradient(circle, rgb(220, 243, 251), rgb(250, 201, 210)); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 0.5rem; */
+  margin-top: 5%;
+  box-sizing: border-box;
+}
+
+#Author{
+  text-align: center;
+  font-size: 5vh;
+  margin-top: 20px;
+  margin-bottom: 3px;
+  color: #4A5568;
+  font-weight: 800;
+}
+
+.author-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  /* background: white; */
+  border-radius: 50px;
+  /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); */
+  overflow: hidden;
+  max-width: 900px;
+  margin-top: 0%;
+  margin-left: 20%;
+  margin-bottom: 5%;
+  margin-top: 4%;
+}
+
+.author-image {
+  /* flex: 1 1 40%; */
+  max-width: 350px;
+  height: auto;
+  /* height: 30%; */
+  object-fit: cover;
+  /* border-radius: 15px 0 0 15px; */
+  /* border-radius: 40%; */
+}
+
+.author-info {
+  flex: 1 1 60%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.author-name {
+  font-size: 2rem;
+  font-weight: bold;
+  color: red;
+  margin-bottom: 1rem;
+}
+
+.author-description {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.author-books h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: rgb(237, 10, 86);
+}
+
+.author-books ul {
+  list-style: none;
+  padding: 0;
+}
+
+.author-books ul li {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  color: #555;
+}
+.explore-button-container {
+  position: absolute; /* Absolute positioning */
+  bottom: 20px; /* Space from the bottom */
+  right: 20px; /* Space from the right */
+}
+
+.explore-btn {
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text */
+  padding: 10px 20px; /* Padding */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  display: flex; /* Flexbox for icon and text */
+  align-items: center; /* Center vertically */
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+.explore-btn:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+.arrow {
+  margin-left: 8px; /* Space between text and arrow */
+  font-weight: bold; /* Make the arrow bold */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .author-container {
+    flex-direction: column;
+  }
+
+  .author-image {
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+  }
+
+  .author-info {
+    padding: 1rem;
+  }
+
+  .author-name {
+    font-size: 2rem;
+  }
+
+  .author-description {
+    font-size: 1rem;
+  }
+
+  .author-books h2 {
+    font-size: 1.2rem;
+  }
+}

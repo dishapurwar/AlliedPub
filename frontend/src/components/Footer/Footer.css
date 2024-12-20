@@ -1,0 +1,97 @@
+.footer {
+  background-color: #20232a; /* Background color */
+  color: #fff; /* Default text color */
+  padding: 20px 0; /* Padding for top and bottom */
+  font-family: Arial, sans-serif; /* Font family */
+}
+
+.footer-container {
+  display: flex; /* Flex layout for the container */
+  flex-wrap: wrap; /* Wrap items */
+  justify-content: space-between; /* Space between items */
+  max-width: 1200px; /* Max width for the container */
+  margin: 0 auto; /* Center the container */
+  padding: 0 20px; /* Padding for the sides */
+}
+
+.footer-left {
+  flex: 1; /* Flex grow */
+  margin-right: 20px; /* Margin for spacing */
+}
+
+.footer-left h2 {
+  font-size: 1.8rem; /* Heading size */
+  margin-bottom: 10px; /* Margin below heading */
+  color: #61dafb; /* Color for heading */
+}
+
+.footer-left p {
+  line-height: 1.5; /* Line height for text */
+  font-size: 1rem; /* Font size for paragraph */
+  color: #ccc; /* Color for paragraph text */
+}
+
+.footer-links {
+  flex: 1; /* Flex grow */
+  margin-right: 20px; /* Margin for spacing */
+}
+
+.footer-links h3 {
+  font-size: 1.5rem; /* Heading size */
+  margin-bottom: 10px; /* Margin below heading */
+  color: #61dafb; /* Color for heading */
+}
+
+.footer-links ul {
+  list-style: none; /* No bullets */
+  padding: 0; /* No padding */
+}
+
+.footer-links ul li {
+  margin-bottom: 8px; /* Margin below each list item */
+}
+
+.footer-links ul li a {
+  text-decoration: none; /* No underline */
+  color: #ccc; /* Link color */
+  transition: color 0.3s ease; /* Transition effect */
+}
+
+.footer-links ul li a:hover {
+  color: #61dafb; /* Hover color for links */
+}
+
+.footer-social {
+  flex: 1; /* Flex grow */
+}
+
+.footer-social h3 {
+  font-size: 1.5rem; /* Heading size */
+  margin-bottom: 10px; /* Margin below heading */
+  color: #61dafb; /* Color for heading */
+}
+
+.social-icons {
+  display: flex; /* Flex layout for social icons */
+  gap: 15px; /* Gap between icons */
+}
+
+.social-icons a {
+  text-decoration: none; /* No underline */
+  color: white; /* Icon color */
+  font-size: 1.5rem; /* Font size for icons */
+  transition: color 0.3s ease; /* Transition effect */
+}
+
+.social-icons a:hover {
+  color: #61dafb; /* Hover color for icons */
+}
+
+.footer-bottom {
+  text-align: center; /* Center text */
+  margin-top: 20px; /* Margin above */
+  border-top: 1px solid #444; /* Top border */
+  padding-top: 10px; /* Padding above */
+  color: #ccc; /* Color for bottom text */
+  font-size: 0.9rem; /* Font size */
+}

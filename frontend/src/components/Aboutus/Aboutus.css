@@ -1,0 +1,53 @@
+#about-us {
+  padding: 2rem; /* Padding for small screens */
+  background-color: white; /* Background color */
+}
+
+#about-us h1 {
+  font-size: 3.5rem; /* Font size for the title */
+  text-align: center; /* Center align */
+  font-weight: bold; /* Bold font */
+  color: #4A5568; /* Dark gray color */
+  margin-bottom: 1rem; /* Space below title */
+}
+
+.about-us-content {
+  display: flex; /* Flexbox for layout */
+  flex-direction: column; /* Column layout for small screens */
+  align-items: center; /* Center align items */
+
+}
+
+.about-us-image {
+  width: 70%; /* Width for the image */
+  border-radius: 2rem; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  margin-bottom: 1rem; /* Space below image */
+  margin-left: 3%;
+}
+
+@media (min-width: 768px) {
+  .about-us-content {
+    flex-direction: row; /* Row layout for medium screens and above */
+    align-items: flex-start; /* Align items at the start */
+  }
+
+  .about-us-image {
+    width: 33.33%; /* Width for the image on larger screens */
+    margin-right: 1rem; /* Space to the right of the image */
+    margin-bottom: 0; /* No margin below */
+  }
+
+  .about-us-text {
+    width: 50%; /* Width for text container */
+    margin-left: 1.5rem; /* Space to the left of the text */
+    margin-top: 1rem;
+    text-align: justify; 
+  }
+}
+
+.about-us-text p {
+  color: #4A5568; /* Gray color for text */
+  margin-bottom: 1rem; /* Space between paragraphs */
+  text-align: justify; 
+}

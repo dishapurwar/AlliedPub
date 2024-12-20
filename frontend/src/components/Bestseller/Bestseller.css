@@ -1,0 +1,120 @@
+/* Bestsellers Section Styling */
+#Bestsellers {
+  width: 100%;
+  background-color: rgb(226 232 240);;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: radial-gradient(circle);
+  animation: colorChange 5s infinite alternate;
+}
+
+#Bestsellers h1 {
+  text-align: center;
+  font-size: 5vh;
+  margin-top: 2px;
+  color: #4A5568;
+  font-weight: 800;
+}
+
+#Bestsellers h1 span {
+  display: inline-block;
+}
+
+/* Images Section Styling */
+#images {
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+  gap: 25px; /* Spacing between products */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  overflow-y: hidden; /* Prevent vertical scrolling */
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: rgb(192, 190, 190) transparent; /* For Firefox */
+  margin-left: 20px;
+  margin-bottom: 2%;
+}
+
+#images::-webkit-scrollbar {
+  height: 1px; /* Increase scrollbar height */
+}
+
+#images::-webkit-scrollbar-track {
+  background: #fefbfb; /* Light gray for track */
+}
+
+#images::-webkit-scrollbar-thumb {
+  background: #888; /* Darker gray for thumb */
+  border-radius: 10px; /* Rounded corners */
+}
+
+#images::-webkit-scrollbar-thumb:hover {
+  background: #a6a5a5; /* Darker gray on hover */
+}
+
+/* Product Styling */
+.product {
+  flex: 0 0 30%; /* Each product takes up 30% of the container width */
+  max-width: 300px; /* Limit max width for consistency */
+  height: 90%;
+  position: relative;
+  text-align: center;
+  margin-left: 0.5%;
+}
+
+.product img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 25px; /* Rounded corners */
+  transition: transform 0.1s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.product:hover img {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  filter: brightness(50%);
+}
+
+/* Content Styling */
+.product .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+}
+
+.product:hover .content {
+  opacity: 1;
+}
+
+/* Keyframes for Animations */
+@keyframes colorChange {
+  0% {
+    background: radial-gradient(circle);
+  }
+  100% {
+    background: radial-gradient(circle);
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 100%;
+  }
+  50% {
+    opacity: 80%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+

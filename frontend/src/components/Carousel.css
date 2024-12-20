@@ -117,13 +117,14 @@
   }
   
   .know-more-btn {
-    background-color: #007bff;
+    background-color: #75609c;
     color: white;
     border: none;
     padding: 10px 15px;
     font-size: 14px;
     border-radius: 3px;
     cursor: pointer;
+    font-weight: 500;
   }
   
   .know-more-btn:hover {
