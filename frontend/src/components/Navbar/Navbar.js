@@ -1,6 +1,5 @@
-// Navbar.js
-
 import React from "react";
+import { Link } from "react-router-dom";
 import './Navbar.css'; // Import the CSS file
 
 const Navbar = () => {
@@ -8,11 +7,11 @@ const Navbar = () => {
     <header className="navbar">
       <img src="http://www.alliedpub.com/img/alliedlogo.png" alt="Allied Publishers" />
       <nav className="nav-links">
-        <a href="#home" className="nav-link">Home</a>
-        <a href="#distribution" className="nav-link">Distribution</a>
-        <a href="#specialized_agencies" className="nav-link">Specialized Agencies</a>
-        <a href="#export_division" className="nav-link">Export Division</a>
-        <a href="#contact" className="nav-link">Contact Us</a>
+        <Link to="/" className="nav-link">Home</Link>
+        <Link to="/distribution" className="nav-link">Distribution</Link>
+        <Link to="/specialized-agencies" className="nav-link">Specialized Agencies</Link>
+        <Link to="/export-division" className="nav-link">Export Division</Link>
+        <Link to="/contact" className="nav-link">Contact Us</Link>
       </nav>
       <div className="auth-buttons">
         <button className="sign-in">Sign in</button>
