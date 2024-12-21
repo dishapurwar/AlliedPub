@@ -6,6 +6,7 @@ import DistributionPage from "./components/Distribution/DistributionPage";
 import SpecializedAgencies from "./components/SpecializedAgencies/SpecializedAgencies";
 import ExportDPage from "./components/ExportDivision/ExportDivison";
 import ContactPage from "./components/Contact/ContactPage";
+import ConfPrec from "./components/ConfPrec/ConfPrec";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/distribution" element={<DistributionPage />} />
         <Route path="/specialized-agencies" element={<SpecializedAgencies />} />
         <Route path="/export-division" element={<ExportDPage />} />
+        <Route path="/conference" element={<ConfPrec />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
     </Router>
