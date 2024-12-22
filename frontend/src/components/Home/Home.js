@@ -66,6 +66,21 @@ const Home = () => {
           <blockquote className="quote italic text-gray-500 border-l-4 border-green-500 pl-4">
             "Knowledge with an edge."
           </blockquote>
+          <button 
+  id="about" 
+  style={{
+    backgroundColor: '#75609c',
+    color: 'white',
+    padding: '0.5rem 1rem',
+    border: 'none',
+    borderRadius: '0.25rem',
+    cursor: 'pointer',
+    transition: 'background-color 0.3s'
+  }}
+>
+  About us<span className="arrow">→</span>
+</button>
+
         </div>
 
         {/* Carousel Section */}

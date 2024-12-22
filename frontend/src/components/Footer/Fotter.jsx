@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="footer-container">
         <div className="footer-left">
           <h2>Allied Publishers</h2>
-          <p>
+          <p style={{ textAlign: 'justify' }}>
             Allied Publishers is dedicated to bringing you the best books,
             authors, and literary experiences. We strive to connect readers
             with the knowledge and stories that inspire and enlighten.

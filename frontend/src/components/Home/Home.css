@@ -36,3 +36,12 @@
   display: inline; /* Inline display for location items */
   margin-right: 1rem; /* Margin to the right for spacing */
 }
+#about{
+    background-color: #75609c;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
