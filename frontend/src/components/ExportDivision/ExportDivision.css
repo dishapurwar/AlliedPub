@@ -1,65 +1,67 @@
+/* Main container for Export Division page */
 .export-d-page {
   font-family: 'Arial', sans-serif;
   color: #333;
   background-color: #f3f4f6;
   min-height: 100vh;
+  padding: 20px 0; /* Add padding to match Contact Page */
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* .export-d-header {
+/* Header section */
+.export-d-header {
   width: 100%;
-  background: linear-gradient(90deg, #4caf50, #2e7d32);
-  color: white;
   text-align: center;
   padding: 20px 0;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-} */
+  background: white; /* Match Contact Page */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
 
-/* .export-d-header h1 {
+.export-d-header h1 {
   margin: 0;
   font-size: 28px;
   letter-spacing: 1px;
-} */
+}
 
+/* Main content container */
 .export-d-details {
   background: #ffffff;
+  padding: 20px; /* Adjusted padding */
   border: 1px solid #e0e0e0;
-  border-radius: 12px;
-  padding: 30px;
+  border-radius: 8px; /* Match Contact Page */
   width: 90%;
   max-width: 600px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-  margin: 30px 0;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  margin: 20px 0; /* Space between header and footer */
 }
 
-.export-d-details:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
-}
-
+/* Section headers */
 .export-d-details h2 {
   margin: 0 0 15px;
   color: #222;
-  font-size: 22px;
-  border-bottom: 3px solid #4caf50;
+  font-size: 24px;
+  border-bottom: 2px solid #4caf50; /* Match Contact Page */
   display: inline-block;
   padding-bottom: 5px;
 }
 
-.export-d-details p {
+/* Paragraph styling */
+.export-d-details p,
+.export-d-details li {
   margin: 10px 0;
-  line-height: 1.8;
+  line-height: 1.6;
   font-size: 16px;
   color: #555;
 }
 
+/* Highlighted text */
 .export-d-details strong {
-  color: #2e7d32;
+  color: #2e7d32; /* Consistent with Contact Page */
 }
 
+/* Hyperlinks */
 .export-d-details a {
   color: #4caf50;
   text-decoration: none;
@@ -71,8 +73,13 @@
   color: #388e3c;
   text-decoration: underline;
 }
-#foot{
-  bottom:0;
+
+/* Footer adjustments */
+#foot {
+  bottom: 0;
   width: 100%;
-  position: fixed;
+  position: relative; /* Changed to avoid overlap with content */
+  background-color: white; /* Matches Contact Page */
+  text-align: center;
+  padding: 10px 0; /* Adds padding for proper spacing */
 }

@@ -7,6 +7,7 @@ import SpecializedAgencies from "./components/SpecializedAgencies/SpecializedAge
 import ExportDPage from "./components/ExportDivision/ExportDivison";
 import ContactPage from "./components/Contact/ContactPage";
 import ConfPrec from "./components/ConfPrec/ConfPrec";
+import AboutUsPage from "./components/AboutUsPage/AboutUsPage";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/export-division" element={<ExportDPage />} />
         <Route path="/conference" element={<ConfPrec />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/about-us" element={<AboutUsPage />} />
       </Routes>
     </Router>
   );
