@@ -97,8 +97,9 @@ const Navbar = () => {
             <Link to="/distribution" className="nav-link">Distribution</Link>
             <Link to="/specialized-agencies" className="nav-link">Specialized Agencies</Link>
             <Link to="/export-division" className="nav-link">Export Division</Link>
-            <Link to="/contact" className="nav-link">Contact Us</Link>
             <Link to="/conference" className="nav-link">Conference Proceedings</Link>
+            <Link to="/management" className="nav-link">Management</Link>
+            <Link to="/contact" className="nav-link">Contact Us</Link>
           </nav>
         </div>
       </header>

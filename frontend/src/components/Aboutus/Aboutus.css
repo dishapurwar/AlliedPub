@@ -15,7 +15,7 @@
   display: flex; /* Flexbox for layout */
   flex-direction: column; /* Column layout for small screens */
   align-items: center; /* Center align items */
-
+  /* font-size: large; */
 }
 
 .about-us-image {
