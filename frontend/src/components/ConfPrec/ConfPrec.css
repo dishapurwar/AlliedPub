@@ -26,6 +26,7 @@ body, html {
 }
 .conf-prec-content h1{
   border-bottom: 3px solid #4caf50;
+  font-weight: 600;
 }
 /* Footer (existing styles are fine, added comments for context) */
 

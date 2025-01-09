@@ -88,8 +88,8 @@ const DistributionPage = () => {
             </ul>
           </section>
         </main>
-        <Footer />
       </div>
+      <Footer />
     </>
   );
 };
