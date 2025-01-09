@@ -1,158 +1,98 @@
-/* .carousel-container {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    height: 300px; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f0f0f0; 
-  }
-  
-  .carousel-track {
-    display: flex;
-    transition: transform 0.3s ease-in-out;
-    width: 100%;
-    height: 100%;
-  }
-  
-  .carousel-slide {
-    flex-shrink: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-  }
-  
-  .carousel-overlay {
-    position: absolute;
-    bottom: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    color: white;
-  }
-  
-  .carousel-title {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .know-more-btn {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    font-size: 14px;
-    border-radius: 3px;
-    cursor: pointer;
-  }
-  
-  .know-more-btn:hover {
-    background-color: #0056b3;
-  }
-  
-  .carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    font-size: 18px;
-    border-radius: 3px;
-  }
-  
-  .carousel-btn.prev {
-    left: 10px;
-  }
-  
-  .carousel-btn.next {
-    right: 10px;
-  }
-  
-  .carousel-btn:hover {
-    background: rgba(0, 0, 0, 0.7);
-  }
-   */
 
+.carousel-container {
+  position: relative;
+  overflow: hidden;  /* Hide anything that overflows from the container */
+  width: 100%;
+  height: 300px; /* Fixed height for the carousel */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0; /* Optional background color */
+}
 
-   .carousel-container {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    height: 300px; /* Keep the original height */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f0f0f0; /* Optional background */
+/* Track that holds the slides */
+.carousel-track {
+  display: flex;  /* Align slides horizontally */
+  transition: transform 0.3s ease-in-out;  /* Smooth slide transition */
+  width: 100%;
+  height: 100%;
+}
+
+/* Individual slide */
+.carousel-slide {
+  flex-shrink: 0;  /* Prevent slides from shrinking */
+  width: 100%;     /* Each slide takes full width of the container */
+  height: 100%;    /* Ensures slide fills the container height */
+  background-size: cover; /* Ensure image covers the entire slide */
+  background-position: center; /* Center align the image */
+  position: relative;
+}
+
+/* Overlay on each slide */
+.carousel-overlay {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+/* Know more button styling */
+.know-more-btn {
+  background-color: #75609c;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 14px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.know-more-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Styling for the carousel navigation buttons (Next/Previous) */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);  /* Semi-transparent background */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 3px;
+  z-index: 1;  /* Ensure buttons are on top of images */
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+.carousel-btn:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/* Optional: Add media queries for responsiveness */
+@media screen and (max-width: 768px) {
+  .carousel-container {
+    height: 250px; /* Reduce height on smaller screens */
   }
-  
-  .carousel-track {
-    display: flex;
-    transition: transform 0.3s ease-in-out;
-    width: 100%;
-    height: 100%;
-  }
-  
-  .carousel-slide {
-    flex-shrink: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-  }
-  
-  .carousel-overlay {
-    position: absolute;
-    bottom: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-  }
-  
+
   .know-more-btn {
-    background-color: #75609c;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    font-size: 14px;
-    border-radius: 3px;
-    cursor: pointer;
-    font-weight: 500;
+    font-size: 12px;
+    padding: 8px 12px;
   }
-  
-  .know-more-btn:hover {
-    background-color: #0056b3;
-  }
-  
+
   .carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    font-size: 18px;
-    border-radius: 3px;
+    font-size: 16px;
+    padding: 8px 12px;
   }
-  
-  .carousel-btn.prev {
-    left: 10px;
-  }
-  
-  .carousel-btn.next {
-    right: 10px;
-  }
-  
-  .carousel-btn:hover {
-    background: rgba(0, 0, 0, 0.7);
-  }
-  
+}
