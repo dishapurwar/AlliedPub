@@ -1,0 +1,215 @@
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #f3f4f6, #eef2f3);
+}
+
+/* Container layout */
+.container {
+  display: flex;
+  margin: 20px;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 20%;
+  background: linear-gradient(135deg, #0098a1, #007b92);
+  padding: 20px;
+  color: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid white;
+  padding-bottom: 5px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  margin: 10px 0;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.sidebar li:hover {
+  background-color: #00b5c2;
+  transform: scale(1.05);
+}
+
+/* Books section */
+.books-section {
+  width: 80%;
+  padding: 0 20px;
+}
+
+/* Sorting buttons */
+.sort-options {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.sort-options p {
+  font-weight: bold;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.sort-options button {
+  padding: 10px 15px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 25px;
+  font-size: 14px;
+  background: linear-gradient(135deg, #75609c, #d1d8df); /* Apply #75609c as the first color in the gradient */
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sort-options button:hover {
+  background: linear-gradient(135deg, #75609c, #00b5c2); /* Modify hover gradient to include #75609c */
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Book card styles */
+.book-card-horizontal {
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #ffffff, #e6e9ef);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2), -5px -5px 15px rgba(255, 255, 255, 0.5);
+  margin-bottom: 20px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.book-card-horizontal:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.3), -10px -10px 25px rgba(255, 255, 255, 0.7);
+}
+
+.book-image {
+  width: 150px;
+  height: auto;
+  border-radius: 10px;
+  margin: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.book-card-horizontal:hover .book-image {
+  transform: scale(1.1) rotate(2deg);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.book-details {
+  flex: 1;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Ensure content stays at the top */
+  align-items: flex-start; /* Align all details to the left */
+}
+
+.book-details h4 {
+  font-size: 18px;
+  margin: 0 0 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+.book-author {
+  font-size: 14px;
+  color: #555;
+  margin: 5px 0;
+  font-style: italic;
+}
+
+.book-format {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.book-price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #00b5c2;
+  margin: 5px 0;
+}
+
+.mrp {
+  text-decoration: line-through;
+  font-size: 14px;
+  color: #888;
+  margin-left: 5px;
+}
+
+.discount {
+  color: #ff5722;
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+.book-buttons {
+  margin-top: 10px;
+}
+
+.book-buttons button {
+  padding: 10px 15px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 15px;
+  font-size: 14px;
+  background: linear-gradient(135deg, #f3f4f6, #d1d8df);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.book-buttons button:hover {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+.clear-category-btn {
+  margin-top: 20px;
+  padding: 10px 15px;
+  background: linear-gradient(135deg, #e3e3e3, #f9f9f9);
+  border: none;
+  border-radius: 25px;
+  color: #333;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.clear-category-btn:hover {
+  background: linear-gradient(135deg, #75609c, #00b5c2);
+  color: white;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.books-section p {
+  text-align: center;
+  font-weight: bold;
+}
