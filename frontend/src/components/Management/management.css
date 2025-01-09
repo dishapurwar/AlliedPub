@@ -8,29 +8,29 @@ body, html {
   display: flex;
   flex-direction: column;
   background-color: #F3F4F6;
+  width: 100%;
 }
 
 /* Page Container */
-.export-d-page {
+.management-page {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
   margin-top: 2%;
-  background-color: #F4F4F9;
-  padding: 20px;
 }
 
-.export-d-details {
-  width: 90%; /* Ensure the content is aligned with other pages */
-  max-width: 1200px; /* Max width for larger screens */
+/* Content */
+.management-details {
+  flex-grow: 1; /* Pushes footer to the bottom */
   padding: 20px;
-  background-color: #fff;
+  color: #333;
+  background-color: #fff; /* White background to simulate the box */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   border-radius: 8px;
 }
 
 /* Heading Styling */
-.export-d-details h2 {
+.management-details h2 {
   color: #20232a;
   font-size: 2rem;
   font-weight: bold;
@@ -40,44 +40,62 @@ body, html {
 }
 
 /* Section Styling */
-.export-d-details section {
-  margin-top: 20px;
+.management-details section {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  padding: 20px;
+  margin-bottom: 20px;
 }
 
 /* Subheading Styling */
-.export-d-details h3 {
+.management-details h3 {
   color: green;
   font-size: 1.5rem;
   margin-bottom: 10px;
+  font-weight: 600;
 }
 
-/* Contact Details Styling */
-.export-d-details ul {
+/* Branch Subheading */
+.management-details h4 {
+  font-size: 1.2rem;
+  color: rgb(89, 139, 89); /* Blue color for branch names */
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* List Styling */
+.management-details ul {
   padding-left: 20px;
   list-style-type: none;
 }
 
-.export-d-details ul li {
+.management-details ul li {
   margin: 5px 0;
   font-size: 1rem;
   color: #555;
 }
 
-.export-d-details ul li strong {
+.management-details ul li strong {
   font-weight: bold;
 }
 
-/* Links Styling */
-.export-d-details ul li a {
+/* Links */
+.management-details ul li a {
   color: #007BFF;
   text-decoration: none;
 }
 
-.export-d-details ul li a:hover {
+.management-details ul li a:hover {
   text-decoration: underline;
 }
 
 /* Footer Section */
 #head {
   margin-bottom: 40px; /* Adds space between content and footer */
+}
+
+.management-page {
+  background-color: #F4F4F9;
+  padding: 20px;
 }

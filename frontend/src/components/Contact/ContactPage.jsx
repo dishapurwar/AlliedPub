@@ -11,11 +11,11 @@ const ContactPage = () => {
       </div>
       <div className="export-d-page">
         <main className="export-d-details">
-          <h2>Contact Information</h2>
+          <h2>BRANCHES</h2>
 
           {/* Delhi Office */}
           <section>
-            <h3>Delhi Office</h3>
+            <h3>Noida Office</h3>
             <ul>
               <li><strong>Address:</strong> D-5, Sector-2, Noida–201 301</li>
               <li><strong>Ph. Nos.:</strong> 0120-4320295 / 2542557 / 4352866</li>
@@ -54,18 +54,11 @@ const ContactPage = () => {
           </section>
 
           {/* Bangalore Office */}
-          <section>
-            <h3>Bangalore Office</h3>
-            <ul>
-              <li><strong>Address:</strong> P.B. No. 9932, No. 15, 3rd Floor (Next to Vijaya Bank), 5th Cross, Gandhinagar, Bangalore–560009</li>
-              <li><strong>Ph. Nos.:</strong> 080-41530285 / 22386239</li>
-              <li><strong>E-mail:</strong> <a href="mailto:bngl.journals@alliedpublishers.com">bngl.journals@alliedpublishers.com</a></li>
-            </ul>
-          </section>
 
         </main>
-        <Footer />
+    
       </div>
+      <Footer />
     </>
   );
 }

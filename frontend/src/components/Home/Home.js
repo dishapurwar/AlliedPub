@@ -120,45 +120,27 @@ const Home = () => {
       <Navbar />
 
       {/* Location Section */}
-      <div className="flex items-center ml-24 mt-2">
-        <p className="text-gray-600 font-semibold mr-5">Available Locations :</p>
+      <div className="flex  ml-24 mt-2">
+        <p className="text-gray-600 font-semibold mr-10 ml-28">Available Locations :</p>
         <div className="location-list flex items-center space-x-7">
           <span className="location-item flex items-center text-gray-800 hover:text-red-500 transition">
-            <FaMapPin className="text-red-500 text-xl mr-1" />
-            Delhi
+            <FaMapPin className="text-red-500 text-xl mr-1 ml-12" />
+            Noida
           </span>
           <span className="location-item flex items-center text-gray-800 hover:text-red-500 transition">
-            <FaMapPin className="text-red-500 text-xl mr-1" />
-            Lucknow
-          </span>
-          <span className="location-item flex items-center text-gray-800 hover:text-red-500 transition">
-            <FaMapPin className="text-red-500 text-xl mr-1" />
+            <FaMapPin className="text-red-500 text-xl mr-1 ml-12" />
             Kolkata
           </span>
           <span className="location-item flex items-center text-gray-800 hover:text-red-500 transition">
-            <FaMapPin className="text-red-500 text-xl mr-1" />
+            <FaMapPin className="text-red-500 text-xl mr-1 ml-12" />
             Mumbai
           </span>
+          
           <span className="location-item flex items-center text-gray-800 hover:text-red-500 transition">
-            <FaMapPin className="text-red-500 text-xl mr-1" />
-            Nagpur
-          </span>
-          <span className="location-item flex items-center text-gray-800 hover:text-red-500 transition">
-            <FaMapPin className="text-red-500 text-xl mr-1" />
-            Ahmedabad
-          </span>
-          <span className="location-item flex items-center text-gray-800 hover:text-red-500 transition">
-            <FaMapPin className="text-red-500 text-xl mr-1" />
-            Hyderabad
-          </span>
-          <span className="location-item flex items-center text-gray-800 hover:text-red-500 transition">
-            <FaMapPin className="text-red-500 text-xl mr-1" />
+            <FaMapPin className="text-red-500 text-xl mr-1 ml-12" />
             Chennai
           </span>
-          <span className="location-item flex items-center text-gray-800 hover:text-red-500 transition">
-            <FaMapPin className="text-red-500 text-xl mr-1" />
-            Bangalore
-          </span>
+          
         </div>
       </div>
 
@@ -170,7 +152,7 @@ const Home = () => {
             Discover Our Books Collection
           </h1>
           <p className="hero-description text-gray-600 text-lg">
-            Explore a variety of books to suit your needs. From school textbooks to supplementary guides, we have it all.
+            Explore a variety of books to suit your needs.
           </p>
           <blockquote className="quote italic text-gray-500 border-l-4 border-green-500 pl-4">
             "Knowledge with an edge."

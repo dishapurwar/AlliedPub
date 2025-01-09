@@ -50,7 +50,7 @@ const AboutUs = () => {
           Established in 1934 by M. Graham Brash, the Company was acquired by late Mr. R.N. Sachdev, founder
 Chairman of Allied Publishers in 1947. Thus started a wholly Indian management, under his inspiring
 stewardship, and began “The journey of a thousand miles…”
-Step by step, from humble beginnings, grew an elaborate network of five branch offices situated in the
+Step by step, from humble beginnings, grew an elaborate network of four branch offices situated in the
 metro cities and state capitals, supported by Resident Marketing Executives in major University
 towns—all equipped with fully computerized systems to offer prompt and efficient service.
           </p>

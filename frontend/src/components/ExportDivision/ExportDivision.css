@@ -1,85 +1,80 @@
-/* Main container for Export Division page */
-.export-d-page {
-  font-family: 'Arial', sans-serif;
-  color: #333;
-  background-color: #f3f4f6;
+/* General Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
   min-height: 100vh;
-  padding: 20px 0; /* Add padding to match Contact Page */
   display: flex;
   flex-direction: column;
-  align-items: center;
+  background-color: #F3F4F6;
 }
 
-/* Header section */
-.export-d-header {
-  width: 100%;
+/* Page Container */
+.page-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+/* Content Box */
+.exportd-box {
+  flex-grow: 1;
+  max-width: 900px;
+  margin: 0 auto;
+  background: white;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.exportd-box h2 {
+  color: #20232a;
+  font-size: 2rem;
+  margin-bottom: 20px;
   text-align: center;
-  padding: 20px 0;
-  background: white; /* Match Contact Page */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  border-bottom: 3px solid #4caf50;
+  font-weight: 600;
 }
 
-.export-d-header h1 {
-  margin: 0;
-  font-size: 28px;
-  letter-spacing: 1px;
+.exportd-box h3 {
+  font-size: 1.5rem;
+  color: green;
+  margin-bottom: 10px;
 }
 
-/* Main content container */
-.export-d-details {
-  background: #ffffff;
-  padding: 20px; /* Adjusted padding */
-  border: 1px solid #e0e0e0;
-  border-radius: 8px; /* Match Contact Page */
-  width: 90%;
-  max-width: 600px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  margin: 20px 0; /* Space between header and footer */
+.exportd-box ul {
+  list-style-type: none;
+  padding-left: 0;
 }
 
-/* Section headers */
-.export-d-details h2 {
-  margin: 0 0 15px;
-  color: #222;
-  font-size: 24px;
-  border-bottom: 2px solid #4caf50; /* Match Contact Page */
-  display: inline-block;
-  padding-bottom: 5px;
+.exportd-box ul li {
+  margin: 5px 0;
 }
 
-/* Paragraph styling */
-.export-d-details p,
-.export-d-details li {
-  margin: 10px 0;
-  line-height: 1.6;
-  font-size: 16px;
-  color: #555;
+.exportd-box ul li strong {
+  font-weight: bold;
 }
 
-/* Highlighted text */
-.export-d-details strong {
-  color: #2e7d32; /* Consistent with Contact Page */
-}
-
-/* Hyperlinks */
-.export-d-details a {
+.exportd-box a {
   color: #4caf50;
   text-decoration: none;
   font-weight: bold;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
-.export-d-details a:hover {
-  color: #388e3c;
+.exportd-box a:hover {
+  color: #007acc;
   text-decoration: underline;
 }
 
-/* Footer adjustments */
-#foot {
-  bottom: 0;
-  width: 100%;
-  position: relative; /* Changed to avoid overlap with content */
-  background-color: white; /* Matches Contact Page */
-  text-align: center;
-  padding: 10px 0; /* Adds padding for proper spacing */
+/* Footer (same as other pages) */
+.page-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f4f4f9;
+  padding: 20px;
+  font-family: Arial, sans-serif;
 }
