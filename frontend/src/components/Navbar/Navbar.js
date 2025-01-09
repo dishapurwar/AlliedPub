@@ -89,7 +89,7 @@ const Navbar = () => {
       {/* Navbar */}
       <header className="navbar">
         <div className="navbar-left">
-          <img src="http://www.alliedpub.com/img/alliedlogo.png" alt="Allied Publishers" className="navbar-logo" />
+          <img src="/images/alliedlogo.png" alt="Allied Publishers" className="navbar-logo" />
         </div>
         <div className="navbar-center">
           <nav className="nav-links">
