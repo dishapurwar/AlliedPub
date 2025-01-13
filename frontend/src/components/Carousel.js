@@ -18,6 +18,7 @@ const Carousel = () => {
     {
       imageUrl: "https://www.cincinnati.com/gcdn/presto/2021/04/23/PCIN/840baf88-7347-4ebd-8615-c21be2cc766b-IMG_6057.jpeg",
     },
+    
   ];
 
   const handleKnowMoreClick = () => {

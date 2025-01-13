@@ -3,12 +3,13 @@ import "./Bestseller.css";
 import { FaArrowRight } from "react-icons/fa"; 
 
 const products = [
-  { id: "blush", name: "A Court of Thorns and Roses", img: "https://storage.googleapis.com/du-prd/books/images/9781619634459.jpg" },
-  { id: "concealer", name: "IKIGAI", img: "https://images.penguinrandomhouse.com/cover/9780143130727" },
-  { id: "eyeliner", name: "THEY HUNT", img: "https://images-platform.99static.com//Q2Fwj5laXViAM8QtAGAfpxUyEYg=/fit-in/500x500/projects-files/152/15287/1528752/f86d06e9-f594-4207-99a3-ab29ac5bd86d.jpg" },
-  { id: "eyeshadow", name: "HARRY POTTER", img: "https://assets-prd.ignimgs.com/2024/10/23/deathly-hallows-1729710501728.jpg?width=220&auto=webp" },
-  { id: "foundation", name: "The Plot", img: "https://celadonbooks.com/wp-content/uploads/2020/12/ThePlot-768x1167.jpg" },
-  { id: "lipbalm", name: "HIDDEN POTENTIAL", img: "https://adamgrant.net/wp-content/uploads/2023/05/HiddenPo_9780593653142_jkt_front_r1B-477x720.jpg" },
+  { id: "blush", name: "Prashad—Cooking with Indian Masters", img: "https://www.dropbox.com/scl/fi/qgivg5tj3p0zjlattqlad/01_Prashad-Cooking-with-Indian-Masters.jpg?rlkey=9f711wo7yk1a9i0n2vbkac6n8&st=fmt5tts8&raw=1" },
+  { id: "concealer", name: "Astadala Vol. 1 to 8", img: "https://www.dropbox.com/scl/fi/xx7tylx8cn0y3bggx152s/02_Astadala-Vol.-1-to-8.jpg?rlkey=kpiqlncf28elqbstiwsltyuwm&st=85n8qa4s&raw=1" },
+  { id: "eyeliner", name: "My Frozen Turbulence in Kashmir Book", img: "https://www.dropbox.com/scl/fi/lm68o0ldiprz3avgbk80y/03_My-Frozen-Turbulence-in-Kashmir-Book.jpg?rlkey=z4sd0g7dnj01n2wtbadbib5yc&st=tot5fkgq&raw=1" },
+  { id: "eyeshadow", name: "YOGA", img: "https://www.dropbox.com/scl/fi/r7daxiy1a9cti0n8ekdsw/04_Yoga.jpg?rlkey=lj4unjyz25dpnswbrzy9mbpuf&st=6m15r541&raw=1" },
+  { id: "foundation", name: "Indian History and Culture", img: "https://www.dropbox.com/scl/fi/jsrbb4zg9uly5j5u1qesv/05_Indian-History-and-Culture.jpg?rlkey=zxfhyna2h4ayjq6c5lkqdmbpt&st=67es8fu2&raw=1" },
+  { id: "lipbalm", name: "Regional Planning", img: "https://www.dropbox.com/scl/fi/5funn7mop0k68bqhzgok6/06_Regional-Planning.jpg?rlkey=tazq0y7xsxxquza2gvuyc8hme&st=vcmsg4ih&raw=1" },
+  { id: "lipbalm", name: "Advanced machining processes", img: "https://www.dropbox.com/scl/fi/k0s72lmir6lkn0s6u7af8/07_Advanced-machining-processes.jpg?rlkey=lckyj5i0m68ar0saukugotyhv&st=tn41im4t&raw=1" },
 ];
 
 const Bestsellers = () => {

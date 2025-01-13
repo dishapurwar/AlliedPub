@@ -19,11 +19,11 @@
 }
 
 .about-us-image {
-  width: 70%; /* Width for the image */
-  border-radius: 2rem; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
-  margin-bottom: 1rem; /* Space below image */
-  margin-left: 3%;
+  margin-right: 2rem; /* Space to the right of the image */
+  margin-bottom: 0; /* No margin below */
+  margin-left: 9rem;
+  border-radius: 25px;
+  /* width: 20%; */
 }
 
 @media (min-width: 768px) {
@@ -32,11 +32,7 @@
     align-items: flex-start; /* Align items at the start */
   }
 
-  .about-us-image {
-    width: 33.33%; /* Width for the image on larger screens */
-    margin-right: 1rem; /* Space to the right of the image */
-    margin-bottom: 0; /* No margin below */
-  }
+  
 
   .about-us-text {
     width: 50%; /* Width for text container */

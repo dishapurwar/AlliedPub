@@ -40,7 +40,8 @@ const AboutUs = () => {
       <div className="about-us-content">
         {/* About Us Image */}
         <img
-          src="https://static.vecteezy.com/system/resources/thumbnails/041/509/305/small_2x/ai-generated-antique-styled-books-arranged-neatly-on-wooden-shelves-concept-of-antiquarian-books-classic-literature-and-home-library-aesthetics-photo.jpeg"
+          src="https://www.dropbox.com/scl/fi/wynbyixxetjsxc4def4i1/award-pic.jpg?rlkey=is0qurzu6y5j4k0xrft6xwht7&raw=1
+          "
           alt="About Us"
           className="about-us-image"
         />

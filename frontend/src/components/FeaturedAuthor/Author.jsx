@@ -50,40 +50,33 @@ import './Author.css';
 // Author data array (5 authors)
 const authors = [
   {
-    name: 'Amish Tripathi',
+    name: 'Jiggs Kalra',
     image: 'https://upload.wikimedia.org/wikipedia/commons/5/5b/Amish_Tripathi.jpg',
     description:
-      'Amish Tripathi is a contemporary Indian author known for his bestselling mythological fiction novels. His debut series, the Shiva Trilogy, has sold millions of copies and gained immense popularity. Amish combines history, mythology, and fiction to craft narratives that resonate with modern readers.',
+      'Pioneer food columnist and culinary TV anchor, gastronome and food consultant, Jiggs Kalra has been consultant to various national and international hotels and hotel chains. He has conducted memorable Festival of India frequently both in India and abroad and is considered an Ambassador of Indian cuisine worldwide. Jiggs has been inducted into the International Foods and Beverage Forum Hall of Fame...',
     notableWorks: ['The Immortals of Meluha', 'The Secret of the Nagas', 'The Oath of the Vayuputras', 'Ram: Scion of Ikshvaku'],
   },
   {
-    name: 'Chetan Bhagat',
+    name: 'Shri Jagmohan',
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Chetan_Bhagat.jpg/1200px-Chetan_Bhagat.jpg',
     description:
-      'Chetan Bhagat is a popular Indian author and columnist. His novels, often set in urban India, explore themes of love, relationships, and aspirations. Many of his books have been adapted into successful Bollywood films.',
+      'Shri Jagmohan is a truly many-splendoured personality. He has been an outstanding civil servant, Parliamentarian, Union Minister and original thinker and writer. Throughout his long and illustrious years in public service, he has worked with an unmatched passion, for creating a model of fair, just and effective governance....',
     notableWorks: ['Five Point Someone', '2 States', 'Half Girlfriend', 'The Girl in Room 105'],
   },
   {
-    name: 'Ruskin Bond',
+    name: 'B.K.S. Iyengar',
     image: 'https://static.toiimg.com/thumb/msid-79855425,width-400,resizemode-4/79855425.jpg',
     description:
-      'Ruskin Bond is an acclaimed Indian author of British descent. Known for his vivid storytelling, he has written numerous novels, short stories, and essays, often depicting life in the Himalayan foothills.',
+      'B.K.S. Iyengar was born in India in 1918 and started teaching yoga at the age of 17. He was one of the world’s leading teachers of yoga for over 70 years and was internationally recognized as a leading authority of hatha yoga. His own style of teaching, Iyengar Yoga, is followed by certified teachers across the world. Iyengar was the first person to teach yoga to large groups of students...',
     notableWorks: ['The Room on the Roof', 'A Flight of Pigeons', 'Delhi is Not Far', 'Rain in the Mountains'],
   },
   {
-    name: 'Arundhati Roy',
+    name: 'Geeta Iyengar',
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Arundhati_Roy_W.jpg/800px-Arundhati_Roy_W.jpg',
     description:
-      'Arundhati Roy is an Indian author best known for her novel "The God of Small Things," which won the Man Booker Prize for Fiction. Apart from being a novelist, she is also a political activist and essayist.',
+      'Geeta Iyengar has inherited the gift of Yoga from her distinguished father Shri B.K.S. Iyengar, who is a Yoga exponent of world repute, known for his vast knowledge of the subject and his performing skills.She had been teaching Yoga since 1962 in Pune. A graduate in Philosophy and Vaidya Visharad, her knowledge of Ayurveda blended with her knowledge of Yoga, makes her an expert guide for students. She is one of the partners of the Ramamani Iyengar Memorial Yoga Institute.',
     notableWorks: ['The God of Small Things', 'The Ministry of Utmost Happiness'],
-  },
-  {
-    name: 'R.K. Narayan',
-    image: 'https://shwetawrites.com/wp-content/uploads/2014/10/narayan-r-k.jpg',
-    description:
-      'R.K. Narayan was one of India’s most celebrated authors, known for bringing Indian life and culture to global readers. His works are often set in the fictional town of Malgudi and reflect the nuances of everyday life.',
-    notableWorks: ['Swami and Friends', 'The Guide', 'Malgudi Days', 'The Bachelor of Arts'],
-  },
+  }
 ];
 
 const FeaturedAuthor = () => {
