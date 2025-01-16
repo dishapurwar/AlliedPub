@@ -11,7 +11,7 @@
   box-sizing: border-box;
 }
 
-#Author{
+#Author h1{
   text-align: center;
   font-size: 5vh;
   margin-top: 20px;
@@ -41,7 +41,7 @@
   height: auto;
   /* height: 30%; */
   object-fit: cover;
-  /* border-radius: 15px 0 0 15px; */
+  border-radius: 10% 0 0 10%;
   /* border-radius: 40%; */
 }
 
@@ -50,7 +50,7 @@
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 .author-name {
@@ -59,6 +59,7 @@
   color: red;
   margin-bottom: 1rem;
   color:#75609c;
+  align-items:left;
 }
 
 .author-description {
@@ -98,10 +99,12 @@
   border-radius: 0.25rem;
   cursor: pointer;
   transition: 'background-color 0.3s';
+  margin-right: 4%;
+  margin-top: 3%;
 }
 
 .explore-btn:hover {
-  background-color: #45a049; /* Darker green on hover */
+  background-color: #57139b; /* Darker green on hover */
 }
 
 .arrow {
@@ -125,7 +128,7 @@
   margin-right: 5%;
 }
 .view-all-link:hover {
-  background-color: #3a393b; /* Slightly darker background on hover */
+  background-color: #262526; /* Slightly darker background on hover */
 }
 
 .parent-container { 

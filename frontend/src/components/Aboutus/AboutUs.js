@@ -36,7 +36,7 @@ import './Aboutus.css'; // Import the CSS file
 const AboutUs = () => {
   return (
     <section id="about-us">
-      <h1>About Us</h1>
+      <h1>ABOUT US</h1>
       <div className="about-us-content">
         {/* About Us Image */}
         <img
