@@ -108,6 +108,30 @@
   margin-left: 8px; /* Space between text and arrow */
   font-weight: bold; /* Make the arrow bold */
 }
+/* View All Button */
+/* View All Button - Fixed to FeaturedAuthor Section */
+/* Featured Author Section Styling */
+
+/* View All Button Styling */
+.view-all-link{
+  background-color: #4c4b4e;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: 'background-color 0.3s';
+  align-self: flex-end;
+  margin-right: 5%;
+}
+.view-all-link:hover {
+  background-color: #3a393b; /* Slightly darker background on hover */
+}
+
+.parent-container { 
+  display: flex; 
+  justify-content: flex-end; /* Align children to the right */
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {

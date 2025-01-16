@@ -10,6 +10,7 @@ import ConfPrec from "./components/ConfPrec/ConfPrec";
 import AboutUsPage from "./components/AboutUsPage/AboutUsPage";
 import Management from "./components/Management/management";
 import BooksPage from "./components/Books/Book";
+import AllAuthors from "./components/AllAuthors/AllAuthors";
 
 function App() {
   return (
@@ -24,7 +25,7 @@ function App() {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/about-us" element={<AboutUsPage />} />
         <Route path="/management" element={<Management />} />
-        
+        <Route path="/all-authors" element={<AllAuthors />} />
         <Route path="/books" element={<BooksPage />} />
       </Routes>
     </Router>
