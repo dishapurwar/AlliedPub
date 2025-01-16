@@ -27,7 +27,7 @@ const Bestsellers = () => {
           <div className="product" key={product.id} data-id={product.id}>
             <img src={product.img} alt={product.name} />
             <div className="content" data-id={product.id}>
-              <h2>{product.name}</h2>
+              <h5>{product.name}</h5>
             </div>
             <div>
               </div>
