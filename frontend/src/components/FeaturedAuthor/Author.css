@@ -163,3 +163,43 @@
     font-size: 1.2rem;
   }
 }
+
+/* Default positioning for .next-button */
+.next-button {
+  background-color: transparent;
+  border: 2px solid #4CAF50; /* Green border */
+  color: #4CAF50; /* Green color for text and icon */
+  padding:7px 8px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold; /* Make text bold */
+  border-radius: 5px; /* Rounded corners */
+  transition: all 0.3s ease-in-out; /* Smooth transition for background and hover effect */
+  position: absolute; /* Set the position as absolute */
+  right: 20px; /* Align the button 20px from the right */
+  bottom: auto; /* Reset bottom positioning */
+}
+
+.next-button:hover {
+  background-color: #4CAF50; /* Green background on hover */
+  color: white; /* White text when hovered */
+  border-color: #4CAF50; /* Green border */
+}
+
+.arrow {
+  margin-left: 10px;
+  font-size: 20px;
+  display: inline-block;
+  transition: transform 0.3s ease; /* Smooth arrow animation on hover */
+}
+
+.next-button:hover .arrow {
+  transform: translateX(5px); /* Arrow moves slightly to the right on hover */
+}
+
+.next-button-text {
+  margin-right: 10px;
+}

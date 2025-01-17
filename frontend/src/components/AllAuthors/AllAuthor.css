@@ -98,3 +98,25 @@ h1 {
   text-align: center;
 }
 }
+.back-to-home-container {
+  top: 20px; /* Adjust the top position */
+  left: 20px; /* Adjust the left position */
+  z-index: 100; /* Ensure it's above other elements */
+}
+
+.back-to-home-button {
+  background-color: transparent;
+  border: 2px solid #4caf50; /* Green border */
+  color: #4caf50; /* Green text */
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.back-to-home-button:hover {
+  background-color: #4caf50; /* Green background */
+  color: white; /* White text */
+}
