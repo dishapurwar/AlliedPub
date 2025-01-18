@@ -67,23 +67,33 @@
   line-height: 1.6;
   color: #333;
   margin-bottom: 2rem;
+  text-align: justify;
+  text-justify: inter-word; /* Ensures consistent spacing between words */
+  line-height: 1.6;
 }
 
 .author-books h2 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
   color: #75609c;
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 1.6;
 }
 
 .author-books ul {
-  list-style: none;
-  padding: 0;
+  padding-left: 20px;
+  margin: 0; /* Removes unnecessary spacing */
+  list-style-type: disc; /* Keeps a clean list style */
 }
 
 .author-books ul li {
   font-size: 1rem;
   margin: 0.5rem 0;
   color: #555;
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 1.6;
 }
 .explore-button-container {
   position: absolute; /* Absolute positioning */
@@ -100,7 +110,9 @@
   cursor: pointer;
   transition: 'background-color 0.3s';
   margin-right: 4%;
-  margin-top: 3%;
+  display: inline-block;
+  margin-top: 10px;
+  text-align: center;
 }
 
 .explore-btn:hover {
@@ -126,6 +138,9 @@
   transition: 'background-color 0.3s';
   align-self: flex-end;
   margin-right: 5%;
+  display: inline-block;
+  margin-top: 10px;
+  text-align: center;
 }
 .view-all-link:hover {
   background-color: #262526; /* Slightly darker background on hover */

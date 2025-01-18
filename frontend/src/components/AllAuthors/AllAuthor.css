@@ -14,7 +14,7 @@ h1 {
 .all-authors-container {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem; /* Reduced gap between author cards */
   padding: 0 1rem;
 }
 
@@ -55,9 +55,9 @@ h1 {
   font-size: 1.2rem;
   color: #666;
   margin-bottom: 1rem;
-  line-height: 1.8;
+  line-height: 1.4; /* Reduced line height to make the space between lines smaller */
+  text-align: justify; /* Justify the text for better alignment */
 }
-
 .author-card-notable-works {
   font-size: 1rem;
   color: #444;
@@ -93,10 +93,13 @@ h1 {
     height: auto;
   }
 
-  .author-card-info{
-  align-items: center;
-  text-align: center;
-}
+  .author-card-info {
+    flex: 2 1 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem; /* Added gap to reduce space between different elements */
+  }
 }
 .back-to-home-container {
   top: 20px; /* Adjust the top position */

@@ -31,7 +31,7 @@
   gap: 0.5vh; 
   overflow-x: auto; 
   overflow-y: hidden; 
-  scrollbar-width: thick; 
+  scrollbar-width: thin; 
   scrollbar-color: #918e8e #fefbfb; 
   margin-bottom: 6vh; /* Creates extra space below images for the scrollbar */
   padding-bottom: 4vh; /* Adds padding to push the scrollbar down */
@@ -39,8 +39,9 @@
 }
 
 #images::-webkit-scrollbar {
-  height: 6vh; /* Increases scrollbar thickness */
+  height: 1vh; /* Reduced scrollbar thickness to half of the original */
 }
+
 
 #images::-webkit-scrollbar-track {
   background: #fefbfb; /* Light gray for the track */

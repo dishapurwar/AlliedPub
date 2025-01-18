@@ -10,20 +10,27 @@ const Carousel = () => {
 
   const slidesData = [
     {
-      imageUrl: "https://media.istockphoto.com/id/532852345/photo/stack-of-books-in-home-interior.jpg?s=612x612&w=0&k=20&c=xRc6atpQ6b6gYl4MBt42iFvQSi293kC8XyOtVhzYtTc=",
+      imageUrl: "/images/Education.png",
     },
     {
-      imageUrl: "https://images.gr-assets.com/misc/1687810670-1687810670_goodreads_misc.png",
+      imageUrl:
+        "https://images.gr-assets.com/misc/1687810670-1687810670_goodreads_misc.png",
     },
     {
-      imageUrl: "https://www.cincinnati.com/gcdn/presto/2021/04/23/PCIN/840baf88-7347-4ebd-8615-c21be2cc766b-IMG_6057.jpeg",
+      imageUrl:
+        "https://www.cincinnati.com/gcdn/presto/2021/04/23/PCIN/840baf88-7347-4ebd-8615-c21be2cc766b-IMG_6057.jpeg",
     },
-    
   ];
 
   const handleKnowMoreClick = () => {
-        navigate("/books");
-      };
+    if (currentIndex === 3) {
+      // Redirect to the desired website if the third slide's button is clicked
+      window.location.href = "https://www.eupheus.in";
+    } else {
+      // Navigate to the default route for other slides
+      navigate("/books");
+    }
+  };
 
   // Include the duplicate slides for circular effect
   const extendedSlides = [
@@ -71,13 +78,12 @@ const Carousel = () => {
         }}
       >
         {extendedSlides.map((slide, index) => (
-          <div
-            key={index}
-            className="carousel-slide"
-            style={{ backgroundImage: `url(${slide.imageUrl})` }}
-          >
+          <div key={index} className="carousel-slide">
+            <img src={slide.imageUrl} alt={`Slide ${index}`} />
             <div className="carousel-overlay">
-              <button className="know-more-btn" onClick={handleKnowMoreClick}>Know More</button>
+              <button className="know-more-btn" onClick={handleKnowMoreClick}>
+                Know More
+              </button>
             </div>
           </div>
         ))}
@@ -93,5 +99,3 @@ const Carousel = () => {
 };
 
 export default Carousel;
-
-
