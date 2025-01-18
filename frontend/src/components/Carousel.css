@@ -1,31 +1,39 @@
-
+/* Container styling */
 .carousel-container {
   position: relative;
-  overflow: hidden;  /* Hide anything that overflows from the container */
+  overflow: hidden; /* Hide anything that overflows from the container */
   width: 100%;
   height: 300px; /* Fixed height for the carousel */
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f0f0f0; /* Optional background color */
+  background-color: white; /* Optional background color */
 }
 
 /* Track that holds the slides */
 .carousel-track {
-  display: flex;  /* Align slides horizontally */
-  transition: transform 0.3s ease-in-out;  /* Smooth slide transition */
+  display: flex; /* Align slides horizontally */
+  transition: transform 0.3s ease-in-out; /* Smooth slide transition */
   width: 100%;
   height: 100%;
 }
 
 /* Individual slide */
 .carousel-slide {
-  flex-shrink: 0;  /* Prevent slides from shrinking */
-  width: 100%;     /* Each slide takes full width of the container */
-  height: 100%;    /* Ensures slide fills the container height */
-  background-size: cover; /* Ensure image covers the entire slide */
-  background-position: center; /* Center align the image */
+  flex-shrink: 0; /* Prevent slides from shrinking */
+  width: 100%; /* Each slide takes full width of the container */
+  height: 100%; /* Ensures slide fills the container height */
   position: relative;
+  display: flex; /* Ensure child elements are positioned properly */
+  justify-content: center;
+  align-items: center;
+}
+
+/* Ensure images are fully displayed */
+.carousel-slide img {
+  width: 100%; /* Make the image responsive */
+  height: 100%; /* Ensure the image fills the height */
+  object-fit: contain; /* Ensure the whole image is displayed without cropping */
 }
 
 /* Overlay on each slide */
@@ -58,14 +66,14 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);  /* Semi-transparent background */
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
   color: white;
   border: none;
   padding: 10px 15px;
   cursor: pointer;
   font-size: 18px;
   border-radius: 3px;
-  z-index: 1;  /* Ensure buttons are on top of images */
+  z-index: 1; /* Ensure buttons are on top of images */
 }
 
 .carousel-btn.prev {

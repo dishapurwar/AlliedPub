@@ -10,15 +10,15 @@ const Carousel = () => {
 
   const slidesData = [
     {
-      imageUrl: "/images/Education.png",
+      imageUrl: "/images/Conference.png",
     },
     {
       imageUrl:
-        "https://images.gr-assets.com/misc/1687810670-1687810670_goodreads_misc.png",
+        "/images/ConfPrecs.png",
     },
     {
       imageUrl:
-        "https://www.cincinnati.com/gcdn/presto/2021/04/23/PCIN/840baf88-7347-4ebd-8615-c21be2cc766b-IMG_6057.jpeg",
+        "/images/schoolbooks.jpg",
     },
   ];
 
