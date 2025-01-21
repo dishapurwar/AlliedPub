@@ -11,7 +11,7 @@ const Management = () => {
       </div>
       <div className="management-page">
         <main className="management-details">
-          <h2>MANAGEMENT</h2>
+          <h2>Management</h2>
 
           {/* Board of Directors */}
         

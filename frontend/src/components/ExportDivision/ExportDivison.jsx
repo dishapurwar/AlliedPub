@@ -11,7 +11,7 @@ const ExportDPage = () => {
       </div>
       <div className="page-container">
         <main className="exportd-box">
-          <h2>FOR ORDERS AND OTHER QUERIES</h2>
+          <h2>For orders and other queries</h2>
           <p>
             Allied Publishers, Export Division has been engaged actively in the field of exports for over thirty years. Our Export clients are situated all over the World. Our main focus regions are South East Asia, Middle East, and Africa, and we are also exporting to Europe and North America. Allied’s Export division has received official recognition in the year 1978 and consequently received seven Export Merit Certificates. It has enjoyed the position as one of the best Exporters of Educational Books and Printing Jobs from India.
           </p>

@@ -21,9 +21,11 @@
 .about-us-image {
   margin-right: 2rem; /* Space to the right of the image */
   margin-bottom: 0; /* No margin below */
-  margin-left: 9rem;
+  margin-left: 2rem;
+  width: 40%; /* Set the image width to 50% of its container */
+  /* Alternatively, use a fixed width like: width: 200px; */
+  height: auto; /* Maintain the aspect ratio */
   /* border-radius: 25px; */
-  /* width: 20%; */
 }
 
 @media (min-width: 768px) {

@@ -11,7 +11,7 @@ const ContactPage = () => {
       </div>
       <div className="export-d-page">
         <main className="export-d-details">
-          <h2>BRANCHES</h2>
+          <h2>Branches</h2>
 
           {/* Delhi Office */}
           <section>

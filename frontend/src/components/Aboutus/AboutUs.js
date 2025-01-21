@@ -39,8 +39,11 @@ const AboutUs = () => {
       <h1>ABOUT US</h1>
       <div className="about-us-content">
         {/* About Us Image */}
-        <img
+        {/* <img
           src="https://www.dropbox.com/scl/fi/wynbyixxetjsxc4def4i1/award-pic.jpg?rlkey=is0qurzu6y5j4k0xrft6xwht7&raw=1
+          " */}
+          <img
+          src="/images/with award pic.jpg
           "
           alt="About Us"
           className="about-us-image"

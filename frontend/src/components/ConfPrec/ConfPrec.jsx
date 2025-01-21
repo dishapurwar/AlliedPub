@@ -12,7 +12,7 @@ const ConfPrec = () => {
       </div>
       <div className="page-container">
         <main className="conf-prec-content">
-          <h1>CONFERENCE PROCEEDINGS</h1>
+          <h1>Conference proceedings</h1>
           <p>
             Allied Publishers have, in recent years, become the leading publishers for 
             proceedings of national and international seminars/symposia (pre- and 

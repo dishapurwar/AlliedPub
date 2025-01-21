@@ -11,14 +11,15 @@
   box-sizing: border-box;
 }
 
-#Author h1{
+#Author h1 {
   text-align: center;
-  font-size: 5vh;
+  font-size: 2.25rem; /* Ensure the font size matches History and Objective */
   margin-top: 20px;
   margin-bottom: 3px;
   color: #4A5568;
   font-weight: 800;
 }
+
 
 .author-container {
   display: flex;
@@ -54,12 +55,11 @@
 }
 
 .author-name {
-  font-size: 2rem;
+  font-size: 2.25rem; /* Matching font size for consistency */
   font-weight: bold;
-  color: red;
+  color: #75609c;
   margin-bottom: 1rem;
-  color:#75609c;
-  align-items:left;
+  text-align: left;
 }
 
 .author-description {
@@ -108,7 +108,7 @@
   border: none;
   border-radius: 0.25rem;
   cursor: pointer;
-  transition: 'background-color 0.3s';
+  transition: background-color 0.3s;
   margin-right: 4%;
   display: inline-block;
   margin-top: 10px;
@@ -116,9 +116,8 @@
 }
 
 .explore-btn:hover {
-  background-color: #57139b; /* Darker green on hover */
+  background-color: #57139b; /* Darker color on hover */
 }
-
 .arrow {
   margin-left: 8px; /* Space between text and arrow */
   font-weight: bold; /* Make the arrow bold */
@@ -128,22 +127,23 @@
 /* Featured Author Section Styling */
 
 /* View All Button Styling */
-.view-all-link{
+.view-all-link {
   background-color: #4c4b4e;
   color: white;
   padding: 0.5rem 1rem;
   border: none;
   border-radius: 0.25rem;
   cursor: pointer;
-  transition: 'background-color 0.3s';
+  transition: background-color 0.3s;
   align-self: flex-end;
   margin-right: 5%;
   display: inline-block;
   margin-top: 10px;
   text-align: center;
 }
+
 .view-all-link:hover {
-  background-color: #262526; /* Slightly darker background on hover */
+  background-color: #262526;
 }
 
 .parent-container { 
