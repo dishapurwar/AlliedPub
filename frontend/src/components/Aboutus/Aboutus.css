@@ -4,48 +4,51 @@
 }
 
 #about-us h1 {
-  /* font-size: 3.5rem; Font size for the title */
-  text-align: center; /* Center align */
+  text-align: center; /* Center align the title */
   font-weight: bold; /* Bold font */
   color: #4A5568; /* Dark gray color */
-  margin-bottom: 1rem; /* Space below title */
+  margin-bottom: 1rem; /* Space below the title */
 }
 
 .about-us-content {
   display: flex; /* Flexbox for layout */
   flex-direction: column; /* Column layout for small screens */
   align-items: center; /* Center align items */
-  /* font-size: large; */
 }
 
-.about-us-image {
-  margin-right: 2rem; /* Space to the right of the image */
-  margin-bottom: 0; /* No margin below */
-  margin-left: 2rem;
-  width: 40%; /* Set the image width to 50% of its container */
-  /* Alternatively, use a fixed width like: width: 200px; */
-  height: auto; /* Maintain the aspect ratio */
-  /* border-radius: 25px; */
+.about-us-image,
+.about-us-image-large {
+  width: 300px; /* Fixed width for both images */
+  height: 300px; /* Fixed height for both images */
+  margin: 1rem; /* Add spacing around the images */
+  border-radius: 10px; /* Rounded corners for better aesthetics */
+  object-fit: cover; /* Ensures the image fits neatly within its container */
+}
+
+.about-us-text {
+  color: #4A5568; /* Gray color for text */
+  text-align: justify; /* Justify text for better readability */
+  margin: 1rem 0; /* Vertical spacing for text */
+}
+
+.about-us-text p {
+  margin-bottom: 1rem; /* Space between paragraphs */
 }
 
 @media (min-width: 768px) {
   .about-us-content {
-    flex-direction: row; /* Row layout for medium screens and above */
+    flex-direction: row; /* Row layout for larger screens */
     align-items: flex-start; /* Align items at the start */
   }
 
-  
+  .about-us-image {
+    width: 30%; /* Adjust width for larger screens */
+    margin: 0 1rem; /* Add horizontal spacing */
+  }
 
   .about-us-text {
-    width: 50%; /* Width for text container */
+    width: 50%; /* Set width for the text container */
     margin-left: 1.5rem; /* Space to the left of the text */
-    margin-top: 1rem;
-    text-align: justify; 
+    text-align: justify;
   }
-}
-
-.about-us-text p {
-  color: #4A5568; /* Gray color for text */
-  margin-bottom: 1rem; /* Space between paragraphs */
-  text-align: justify; 
 }
