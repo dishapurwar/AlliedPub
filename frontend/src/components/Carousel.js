@@ -125,12 +125,12 @@ const Carousel = () => {
       overlayText: "",
     },
     {
-      imageUrl: "/images/Conference1.png",
+      imageUrl: "https://www.dropbox.com/scl/fi/orhgvq9sd8b07zevcua4c/Conference-1.png?rlkey=qg8bqbu6g7ltdowyvae80nslk&st=nk4dfuv4&raw=1",
       overlayText: "",
     },
     {
-      imageUrl: "/images/eupheus (2).jpg",
-      overlayText: "School Books", // Add overlay text for the third slide
+      imageUrl: "https://www.dropbox.com/scl/fi/9za25phut7iestlya0ltu/School-3.png?rlkey=dkpz0m46njxy61umohvha6sw2&st=brnhm6no&raw=1",
+      overlayText: "", // Add overlay text for the third slide
     },
   ];
 
