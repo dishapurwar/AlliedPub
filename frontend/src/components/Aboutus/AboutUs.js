@@ -50,15 +50,11 @@ const AboutUs = () => {
       <div className="about-us-content">
         {/* About Us Images */}
         <img
-          src="https://www.dropbox.com/scl/fi/wynbyixxetjsxc4def4i1/award-pic.jpg?rlkey=is0qurzu6y5j4k0xrft6xwht7&raw=1"
+          src="https://www.dropbox.com/scl/fi/bq9qvfkm7urslgybdkttb/Screenshot-2025-01-26-at-1.25.55-PM.png?rlkey=j1lbqj1z1f2umntjiq7yk48zc&st=7bqlf749&raw=1"
           alt="Award Pic"
           className="about-us-image"
         />
-        <img
-          src="/images/Final pic.jpg"
-          alt="About Us"
-          className="about-us-image about-us-image-large" // Added a new class
-        />
+        
         {/* About Us Text */}
         <div className="about-us-text">
           <p>
