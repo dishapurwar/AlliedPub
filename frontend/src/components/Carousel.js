@@ -121,7 +121,7 @@ const Carousel = () => {
 
   const slidesData = [
     {
-      imageUrl: "/images/he.png",
+      imageUrl: "/images/higher.png",
       overlayText: "",
     },
     {
