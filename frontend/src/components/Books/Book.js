@@ -211,7 +211,7 @@ const BooksPage = () => {
       image: 'https://www.dropbox.com/scl/fi/7dch8xhy9e0pv29keu2jt/07_The-Real-Ramakrishna.jpg?rlkey=qj1zgdafe2tbwxctjcs5ecbx1&st=4bpo59nl&raw=1',
     },
     {
-      title: '08_Millets 2023 A Transdisciplinary Approach to its Resurgence and Sustainability_cover_29-09-2023',
+      title: 'Millets 2023 A Transdisciplinary Approach to its Resurgence and Sustainability',
       author: 'M.C. Nair',
       format: 'Hard Bound',
       price: 120,
@@ -302,28 +302,28 @@ const BooksPage = () => {
           </div>
 
           {filteredBooks.length === 0 ? (
-            <p className="no-books-message">No Books Found!</p>
-          ) : (
-            filteredBooks.map((book, index) => (
-              <div className="book-card-horizontal" key={index}>
-                <img src={book.image} alt={book.title} className="book-image" />
-                <div className="book-details">
-                  <h4>{book.title}</h4>
-                  <p className="book-author">by {book.author}</p>
-                  <p className="book-format">{book.format}</p>
-                  <p className="book-price">
-                    ₹{book.price}{' '}
-                    <span className="mrp">
-                      M.R.P.: ₹{book.mrp}
-                    </span>{' '}
-                    <span className="discount">{book.discount}</span>
-                  </p>
-                </div>
-              </div>
-            ))
-          )}
+  <p className="no-books-message">No Books Found!</p>
+) : (
+  <div className="books-section"> 
+    {filteredBooks.map((book, index) => (
+      <div className="book-card-horizontal" key={index}>
+        <img src={book.image} alt={book.title} className="book-image" />
+        <div className="book-details">
+          <h4>{book.title}</h4>
+          <p className="book-author">by {book.author}</p>
+          <p className="book-format">{book.format}</p>
+          <p className="book-price">
+            ₹{book.price}{' '}
+            <span className="mrp">M.R.P.: ₹{book.mrp}</span>{' '}
+            <span className="discount">{book.discount}</span>
+          </p>
         </div>
       </div>
+    ))}
+  </div>
+)}
+</div>
+</div>
     </>
   );
 };
