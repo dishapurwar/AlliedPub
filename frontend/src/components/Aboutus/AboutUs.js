@@ -80,6 +80,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios'; // Import Axios for API calls
 import './Aboutus.css'; // Import the CSS file
+const API_BASE_URL = "process.env.REACT_APP_BACKEND_URL";
 
 const AboutUs = () => {
   const [aboutUsData, setAboutUsData] = useState(null);
@@ -87,7 +88,7 @@ const AboutUs = () => {
   useEffect(() => {
     // Fetch About Us data from the backend
     axios
-      .get("http://localhost:5001/api/home/about-us") // Adjust the backend URL if needed
+      .get("${API_BASE_URL}/api/home/locations") // Adjust the backend URL if needed
       .then((response) => {
         setAboutUsData(response.data); // Set the About Us data
       })

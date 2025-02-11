@@ -43,12 +43,13 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./Bestseller.css"; // CSS file
 import { FaArrowRight } from "react-icons/fa";
+const API_BASE_URL = process.env.REACT_APP_BACKEND_URL;
 
 const Bestsellers = () => {
   const [products, setProducts] = useState([]);  // Bestseller books ka state
 
   useEffect(() => {
-    axios.get("http://localhost:5001/api/home/bestsellers") // API call
+    axios.get("${API_BASE_URL}/api/home/bestsellers") // API call
       .then((res) => setProducts(res.data))
       .catch((err) => console.error("Error fetching bestsellers:", err));
   }, []);
