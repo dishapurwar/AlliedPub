@@ -263,20 +263,7 @@ const Home = () => {
       <AboutUs />
 
       {/* 📚 Bestsellers Section */}
-      <div id="Bestsellers">
-        <h1>BESTSELLERS</h1>
-        <div id="images">
-          {books.map((book) => (
-            <div className="product" key={book._id}>
-              <img src={book.image} alt={book.title} />
-              <div className="content">
-                <h5>{book.title}</h5>
-                <p>{book.author?.name}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
+    <Bestsellers/>
 
       {/* ✍ Featured Authors Section */}
       {/* ✍ Featured Authors Section */}
