@@ -88,7 +88,7 @@ const AboutUs = () => {
   useEffect(() => {
     // Fetch About Us data from the backend
     axios
-      .get("${API_BASE_URL}/api/home/locations") // Adjust the backend URL if needed
+      .get("http://localhost:5001/api/home/about-us") // Adjust the backend URL if needed
       .then((response) => {
         setAboutUsData(response.data); // Set the About Us data
       })

@@ -49,7 +49,7 @@ const Bestsellers = () => {
   const [products, setProducts] = useState([]);  // Bestseller books ka state
 
   useEffect(() => {
-    axios.get("${API_BASE_URL}/api/home/bestsellers") // API call
+    axios.get("http://localhost:5001/api/home/bestsellers") // API call
       .then((res) => setProducts(res.data))
       .catch((err) => console.error("Error fetching bestsellers:", err));
   }, []);

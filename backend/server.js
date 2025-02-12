@@ -16,9 +16,9 @@ const app = express();
 
 // CORS middleware setup - allow frontend to access the backend
 app.use(cors({
-  origin: [process.env.FRONTEND_URL, "http://localhost:3000"], // Allow frontend (Vercel + Localhost)
-  methods: ["GET", "POST", "PUT", "DELETE"],  
-  credentials: true   
+  origin: "http://localhost:3000", // Allow requests from your frontend
+  methods: ["GET", "POST"],        // Allow these HTTP methods
+  credentials: true                // Allow cookies if required
 }));
 
 app.use(express.json());
