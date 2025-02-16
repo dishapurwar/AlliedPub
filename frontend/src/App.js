@@ -11,6 +11,9 @@ import AboutUsPage from "./components/AboutUsPage/AboutUsPage";
 import Management from "./components/Management/management";
 import BooksPage from "./components/Books/Book";
 import AllAuthors from "./components/AllAuthors/AllAuthors";
+import AdminAboutUs from "./components/Admin/AdminAboutus";
+import AdminLocation from "./components/Admin/AdminLocation";
+// import AdminDashboard from "./components/Admin/AdminDashboard";
 
 function App() {
   return (
@@ -27,6 +30,9 @@ function App() {
         <Route path="/management" element={<Management />} />
         <Route path="/all-authors" element={<AllAuthors />} />
         <Route path="/books" element={<BooksPage />} />
+        <Route path="/admin/about-us" element={<AdminAboutUs />} />
+        <Route path="/admin/locations" element={<AdminLocation />} />
+        {/* <Route path="/admin" element={<AdminDashboard />} /> */}
       </Routes>
     </Router>
   );

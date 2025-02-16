@@ -1,0 +1,155 @@
+/* Admin Location - Full Page */
+.admin-container {
+    display: flex;
+    justify-content: center;  /* Center Horizontally */
+    align-items: center;  /* Center Vertically */
+    min-height: 100vh;
+    background: url("/public/images/bg4.jpeg") no-repeat center center/cover;
+    padding: 20px;
+  }
+  
+  /* Centered Admin Panel */
+  .admin-location-container {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+  }
+  
+  /* Glassmorphism Effect */
+  .admin-location-form {
+    width: 100%;
+    max-width: 500px;
+    background: rgba(255, 255, 255, 0.3); /* Glass Effect */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  /* Heading - Centered & White */
+  h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: White;
+    font-weight: bold;
+  }
+  
+  /* Form Labels */
+  label {
+    display: block;
+    font-size: 18px;
+    margin: 10px 0 5px;
+    color: black;
+    font-weight: bold;
+  }
+  
+  /* Input Field */
+  input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.6);
+    color: black;
+    outline: none;
+    text-align: center;
+    font-weight: 500;
+  }
+  
+  /* Buttons */
+  .form-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+  
+  .add-button, .save-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .add-button {
+    background: #ff9f43;
+    color: black;
+    font-weight: bold;
+  }
+  
+  .save-button {
+    background: #2ecc71;
+    color: black;
+    font-weight: bold;
+  }
+  
+  .add-button:hover {
+    background: #ff6f00;
+    color: white;
+  }
+  
+  .save-button:hover {
+    background: #27ae60;
+    color: white;
+  }
+  
+  /* Table for Displaying Locations */
+  .admin-location-list {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .admin-location-list table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .admin-location-list th,
+  .admin-location-list td {
+    padding: 12px;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+  }
+  
+  .admin-location-list th {
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 5px;
+  }
+  
+  .admin-location-list td {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+  }
+  
+  /* Delete Button */
+  .delete-button {
+    background: #e74c3c;
+    color: white;
+    padding: 8px 12px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s ease;
+  }
+  
+  .delete-button:hover {
+    background: #c0392b;
+  }
+  

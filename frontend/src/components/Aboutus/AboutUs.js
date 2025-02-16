@@ -77,46 +77,84 @@
 // };
 
 // export default AboutUs;
-import React, { useEffect, useState } from 'react';
-import axios from 'axios'; // Import Axios for API calls
-import './Aboutus.css'; // Import the CSS file
-const API_BASE_URL = "process.env.REACT_APP_BACKEND_URL";
+// import React, { useEffect, useState } from 'react';
+// import axios from 'axios'; // Import Axios for API calls
+// import './Aboutus.css'; // Import the CSS file
+// const API_BASE_URL = "process.env.REACT_APP_BACKEND_URL";
+
+// const AboutUs = () => {
+//   const [aboutUsData, setAboutUsData] = useState(null);
+
+//   useEffect(() => {
+//     // Fetch About Us data from the backend
+//     axios
+//       .get("http://localhost:5001/api/home/about-us") // Adjust the backend URL if needed
+//       .then((response) => {
+//         setAboutUsData(response.data); // Set the About Us data
+//       })
+//       .catch((error) => {
+//         console.error("Error fetching About Us data:", error);
+//       });
+//   }, []); // Empty dependency array to run only once when component mounts
+
+//   // Show loading text until data is fetched
+//   if (!aboutUsData) {
+//     return <div>Loading...</div>;
+//   }
+
+//   return (
+//     <section id="about-us">
+//       <h1>{aboutUsData.title}</h1> {/* Dynamically display the title */}
+//       <div className="about-us-content">
+//         {/* About Us Image */}
+//         <img
+//           src={aboutUsData.content.image} // Dynamically use image URL from the backend
+//           alt="Award Pic"
+//           className="about-us-image"
+//         />
+        
+//         {/* About Us Text */}
+//         <div className="about-us-text">
+//           {aboutUsData.content.description.map((paragraph, index) => (
+//             <p key={index}>{paragraph}</p> // Map over the description array and display each paragraph
+//           ))}
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default AboutUs;
+
+
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import "./Aboutus.css";
+
+// const API_BASE_URL = process.env.REACT_APP_BACKEND_URL;
 
 const AboutUs = () => {
   const [aboutUsData, setAboutUsData] = useState(null);
 
   useEffect(() => {
-    // Fetch About Us data from the backend
     axios
-      .get("http://localhost:5001/api/home/about-us") // Adjust the backend URL if needed
-      .then((response) => {
-        setAboutUsData(response.data); // Set the About Us data
-      })
-      .catch((error) => {
-        console.error("Error fetching About Us data:", error);
-      });
-  }, []); // Empty dependency array to run only once when component mounts
+      .get("http://localhost:5001/api/home/about-us")
+      .then((response) => setAboutUsData(response.data))
+      .catch((error) => console.error("Error fetching About Us data:", error));
+  }, []);
 
-  // Show loading text until data is fetched
   if (!aboutUsData) {
     return <div>Loading...</div>;
   }
 
   return (
     <section id="about-us">
-      <h1>{aboutUsData.title}</h1> {/* Dynamically display the title */}
+      <h1>{aboutUsData.title}</h1>
       <div className="about-us-content">
-        {/* About Us Image */}
-        <img
-          src={aboutUsData.content.image} // Dynamically use image URL from the backend
-          alt="Award Pic"
-          className="about-us-image"
-        />
-        
-        {/* About Us Text */}
+        <img src={aboutUsData.content.image} alt="Award Pic" className="about-us-image" />
         <div className="about-us-text">
           {aboutUsData.content.description.map((paragraph, index) => (
-            <p key={index}>{paragraph}</p> // Map over the description array and display each paragraph
+            <p key={index}>{paragraph}</p>
           ))}
         </div>
       </div>
