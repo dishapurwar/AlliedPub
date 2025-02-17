@@ -2,9 +2,11 @@ const express = require("express");
 const Location = require("../models/Location");
 const Book = require("../models/Book");
 const Author = require("../models/Author");
+const Publisher = require("../models/Publisher");
 // const AboutUs = require("../models/AboutUs");
 const { getAboutUs, updateAboutUs } = require("../controllers/AboutusController");
 const { getLocations, addLocation } = require("../controllers/LocationController");
+
 
 const router = express.Router();
 
@@ -42,7 +44,14 @@ router.get("/authors", async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 });
-
+router.get("/publisher", async (req, res) => {
+  try {
+    const publishers = await Publisher.find(); // MongoDB se publishers fetch karna
+    res.json(publishers);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
 // router.get("/about-us", async (req, res) => {
 //   try {
 //     const aboutUsData = await AboutUs.findOne(); // Fetch About Us info

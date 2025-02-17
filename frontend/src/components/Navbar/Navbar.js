@@ -94,7 +94,7 @@ const Navbar = () => {
         <div className="navbar-center">
           <nav className="nav-links">
             <Link to="/" className="nav-link">Home</Link>
-            <Link to="/distribution" className="nav-link">Distribution</Link>
+            <Link to="/publisher" className="nav-link">Distribution</Link>
             <Link to="/specialized-agencies" className="nav-link">Specialized Agencies</Link>
             <Link to="/export-division" className="nav-link">Export Division</Link>
             <Link to="/conference" className="nav-link">Conference Proceedings</Link>
