@@ -130,7 +130,7 @@ For a list of International Publishers, Indian Publishers, Standard Publications
 
           {/* Publishers List */}
           <section>
-            <h3><b>Publishers</b></h3>
+           
             {publishers.length > 0 ? (
         publishers.map((categoryData, index) => (
           <div key={index}>

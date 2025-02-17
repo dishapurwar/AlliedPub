@@ -22,8 +22,8 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/publisher" element={<DistributionPage />} />
-        <Route path="/specialized-agencies" element={<SpecializedAgencies />} />
-        <Route path="/export-division" element={<ExportDPage />} />
+        <Route path="/special-agency" element={<SpecializedAgencies />} />
+        <Route path="/export-info" element={<ExportDPage />} />
         <Route path="/conference" element={<ConfPrec />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/about-us" element={<AboutUsPage />} />

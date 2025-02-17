@@ -18,8 +18,8 @@ body, html {
   padding: 20px;
 }
 
-/* Content Box */
-.exportd-box {
+/* Main Content Box */
+.export-info-content {
   flex-grow: 1;
   max-width: 900px;
   margin: 0 auto;
@@ -29,47 +29,61 @@ body, html {
   border-radius: 8px;
 }
 
-.exportd-box h2 {
+/* Heading for Export Division */
+.export-info-content h1 {
   color: #20232a;
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 20px;
   text-align: center;
   border-bottom: 3px solid #4caf50;
   font-weight: 600;
 }
 
-.exportd-box h3 {
-  font-size: 1.5rem;
+/* Subheadings (h3) */
+.export-info-content h3 {
+  font-size: 1.75rem;
   color: green;
+  margin-top: 20px;
   margin-bottom: 10px;
+  text-align: left;
 }
 
-.exportd-box ul {
+/* List styling for sections */
+.export-info-content ul {
   list-style-type: none;
   padding-left: 0;
 }
 
-.exportd-box ul li {
+.export-info-content ul li {
   margin: 5px 0;
+  font-size: 1rem;
 }
 
-.exportd-box ul li strong {
+.export-info-content ul li strong {
   font-weight: bold;
 }
 
-.exportd-box a {
+/* Styling for Contact Information */
+.export-info-content a {
   color: #4caf50;
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
-.exportd-box a:hover {
+.export-info-content a:hover {
   color: #007acc;
   text-decoration: underline;
 }
 
-/* Footer (same as other pages) */
+/* Contact Information Paragraph */
+.export-info-content p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+/* Footer Styling (same as other pages) */
 .page-container {
   min-height: 100vh;
   display: flex;
@@ -77,4 +91,9 @@ body, html {
   background-color: #f4f4f9;
   padding: 20px;
   font-family: Arial, sans-serif;
+}
+
+export-info-content em {
+  font-style: italic;
+  color: #555;
 }
