@@ -17,4 +17,4 @@ const ConferenceProceedingsSchema = new mongoose.Schema(
   { collection: "conference_proceedings" } // Explicitly setting collection name
 );
 
-module.exports = mongoose.model("ConferenceProceedings", ConferenceProceedingsSchema, "conference_proceedings");
+module.exports = mongoose.model("ConferenceProceedings", ConferenceProceedingsSchema);

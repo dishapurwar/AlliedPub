@@ -259,7 +259,7 @@ const BooksPage = () => {
       <div className="container">
         {/* Sidebar for Categories */}
         <div className="sidebar">
-          <h3>CATEGORIES</h3>
+          <h2>CATEGORIES</h2>
           <ul>
             {categories.map((category, index) => (
               <li

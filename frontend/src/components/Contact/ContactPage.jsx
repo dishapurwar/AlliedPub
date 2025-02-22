@@ -77,7 +77,7 @@ const ContactPage = () => {
   useEffect(() => {
     const fetchBranchData = async () => {
       try {
-        const response = await fetch('http://localhost:5001/api/home/contact');
+        const response = await fetch("http://localhost:5001/api/home/contact");
         const data = await response.json();
         console.log('Fetched Data:', data);  // Log data to check its structure
   

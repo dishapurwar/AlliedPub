@@ -15,12 +15,12 @@ const AdminLocation = () => {
       .catch((error) => console.error("Error fetching locations:", error));
   }, []);
 
-  // Handle form submission
+  // Handle form submission (Add Location)
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5001/api/home/admin/locations", { name: location });
-      setLocations([...locations, { name: location }]); // Update UI
+      const response = await axios.post("http://localhost:5001/api/home/admin/locations", { name: location });
+      setLocations([...locations, response.data]); // Update UI
       setLocation(""); // Clear input
       alert("Location added successfully!");
     } catch (error) {
@@ -28,11 +28,24 @@ const AdminLocation = () => {
     }
   };
 
+  // Handle deleting a location
+  const handleDelete = async (id) => {
+    try {
+      await axios.delete(`http://localhost:5001/api/home/admin/locations/${id}`);
+      setLocations(locations.filter((loc) => loc._id !== id)); // Remove from UI
+      alert("Location deleted successfully!");
+    } catch (error) {
+      console.error("Error deleting location:", error);
+    }
+  };
+
   return (
     <div className="admin-container">
       <Sidebar />
       <div className="admin-location-container">
-        <h2>Admin Panel - Manage Locations</h2>
+        <h3>Admin Panel - Manage Locations</h3>
+        
+        {/* Add Location Form */}
         <form className="admin-location-form" onSubmit={handleSubmit}>
           <label>Location Name:</label>
           <input
@@ -40,16 +53,43 @@ const AdminLocation = () => {
             value={location}
             onChange={(e) => setLocation(e.target.value)}
             required
+            placeholder="Enter location name"
           />
           <button type="submit" className="save-button">Add Location</button>
         </form>
 
-        {/* Display Existing Locations */}
-        <ul className="location-list">
-          {locations.map((loc, index) => (
-            <li key={index}>{loc.name}</li>
-          ))}
-        </ul>
+        {/* Display Existing Locations in a Table */}
+        {locations.length > 0 ? (
+          <div className="admin-location-list">
+            <table>
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Location Name</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                {locations.map((loc, index) => (
+                  <tr key={loc._id}>
+                    <td>{index + 1}</td>
+                    <td>{loc.name}</td>
+                    <td>
+                      <button 
+                        className="delete-button" 
+                        onClick={() => handleDelete(loc._id)}
+                      >
+                        Delete
+                      </button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        ) : (
+          <p className="no-location">No locations added yet.</p>
+        )}
       </div>
     </div>
   );

@@ -38,7 +38,7 @@ const AdminAboutUs = () => {
     <div className="admin-container">
       <Sidebar />
     <div className="admin-about-container">
-      <h1>Admin Panel - Edit About Us</h1>
+      <h3>Admin Panel - Edit About Us</h3>
       <form className="admin-about-form" onSubmit={handleSubmit}>
         <label>Title:</label>
         <input

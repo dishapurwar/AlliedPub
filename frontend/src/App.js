@@ -13,6 +13,14 @@ import BooksPage from "./components/Books/Book";
 import AllAuthors from "./components/AllAuthors/AllAuthors";
 import AdminAboutUs from "./components/Admin/AdminAboutus";
 import AdminLocation from "./components/Admin/AdminLocation";
+import AdminBestseller from "./components/Admin/AdminBestseller";
+import AdminAuthor from "./components/Admin/AdminAuthor";
+import AdminConference from "./components/Admin/AdminConference";
+import AdminContact from "./components/Admin/AdminContact";
+import AdminExportInfo from "./components/Admin/AdminExportInfo";
+import AdminManagement from "./components/Admin/AdminManagement";
+import AdminPublisher from "./components/Admin/AdminPublisher";
+import AdminSpecialAgency from "./components/Admin/AdminSpecialAgency";
 // import AdminDashboard from "./components/Admin/AdminDashboard";
 
 function App() {
@@ -32,7 +40,14 @@ function App() {
         <Route path="/books" element={<BooksPage />} />
         <Route path="/admin/about-us" element={<AdminAboutUs />} />
         <Route path="/admin/locations" element={<AdminLocation />} />
-        {/* <Route path="/admin" element={<AdminDashboard />} /> */}
+        <Route path="/admin/bestsellers" element={<AdminBestseller />} />
+        <Route path="/admin/authors" element={<AdminAuthor />} />
+        <Route path="/admin/conference" element={<AdminConference />} />
+        <Route path="/admin/contact" element={<AdminContact />} />
+        <Route path="/admin/export-info" element={<AdminExportInfo />} />
+        <Route path="/admin/management" element={<AdminManagement />} />
+        <Route path="/admin/publisher" element={<AdminPublisher />} />
+        <Route path="/admin/special-agency" element={<AdminSpecialAgency />} />
       </Routes>
     </Router>
   );

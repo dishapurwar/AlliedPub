@@ -20,7 +20,25 @@ exports.addLocation = async (req, res) => {
 
     const newLocation = new Location({ name });
     await newLocation.save();
-    res.status(201).json({ message: "Location added successfully!" });
+    res.status(201).json(newLocation); // Return the new location
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+};
+
+// ✅ Delete a location by ID
+exports.deleteLocation = async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    // Check if location exists
+    const location = await Location.findById(id);
+    if (!location) {
+      return res.status(404).json({ message: "Location not found" });
+    }
+
+    await Location.findByIdAndDelete(id);
+    res.status(200).json({ message: "Location deleted successfully!" });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
