@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import "./AdminAuthor.css";
 import Sidebar from "./Sidebar";
 
 const AdminAuthor = () => {
@@ -15,7 +14,6 @@ const AdminAuthor = () => {
     axios
       .get("http://localhost:5001/api/home/authors")
       .then((response) => {
-        console.log("Fetched Authors:", response.data);
         setAuthors(response.data);
       })
       .catch((error) => console.error("Error fetching authors:", error));
@@ -31,7 +29,6 @@ const AdminAuthor = () => {
         description,
         notableWorks: notableWorks.split(",").map((work) => work.trim()),
       });
-      console.log("Author Added:", response.data);
 
       // Update state
       setAuthors([...authors, { _id: response.data._id, name, image, description, notableWorks: notableWorks.split(",") }]);
@@ -63,49 +60,89 @@ const AdminAuthor = () => {
   };
 
   return (
-    <div className="admin-container">
+    <div className="flex min-h-screen bg-[#d5d8dc]">
       <Sidebar />
-      <div className="admin-author-container">
-        <h3>Admin Panel - Manage Authors</h3>
+      
+      {/* Main Container */}
+      <div className="flex-1 flex flex-col justify-center items-center px-12 ml-64">
+        <h3 className="text-3xl font-bold text-black uppercase mb-6 text-center">
+          Admin Panel - Manage Authors
+        </h3>
 
         {/* Add Author Form */}
-        <form className="admin-author-form" onSubmit={handleSubmit}>
-          <label>Author Name:</label>
-          <input type="text" value={name} onChange={(e) => setName(e.target.value)} required />
+        <form
+          className="w-full max-w-2xl bg-white/40 backdrop-blur-md border border-white/30 rounded-lg p-8 shadow-lg transition-all duration-500 hover:scale-[1.03] hover:shadow-xl"
+          onSubmit={handleSubmit}
+        >
+          <label className="block text-lg font-bold text-black uppercase mb-1">Author Name:</label>
+          <input
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            required
+            className="w-full p-3 text-center text-black font-medium border-2 border-[#75609c] rounded-lg outline-none transition focus:border-[#0047AB] focus:shadow-lg"
+          />
 
-          <label>Image URL:</label>
-          <input type="text" value={image} onChange={(e) => setImage(e.target.value)} required />
+          <label className="block text-lg font-bold text-black uppercase mt-4 mb-1">Image URL:</label>
+          <input
+            type="text"
+            value={image}
+            onChange={(e) => setImage(e.target.value)}
+            required
+            className="w-full p-3 text-center text-black font-medium border-2 border-[#75609c] rounded-lg outline-none transition focus:border-[#0047AB] focus:shadow-lg"
+          />
 
-          <label>Description:</label>
-          <textarea value={description} onChange={(e) => setDescription(e.target.value)} required />
+          <label className="block text-lg font-bold text-black uppercase mt-4 mb-1">Description:</label>
+          <textarea
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+            required
+            className="w-full p-3 text-black font-medium border-2 border-[#75609c] rounded-lg outline-none transition focus:border-[#0047AB] focus:shadow-lg min-h-[130px] resize-y"
+          />
 
-          <label>Notable Works (comma-separated):</label>
-          <input type="text" value={notableWorks} onChange={(e) => setNotableWorks(e.target.value)} />
+          <label className="block text-lg font-bold text-black uppercase mt-4 mb-1">Notable Works (comma-separated):</label>
+          <input
+            type="text"
+            value={notableWorks}
+            onChange={(e) => setNotableWorks(e.target.value)}
+            className="w-full p-3 text-center text-black font-medium border-2 border-[#75609c] rounded-lg outline-none transition focus:border-[#0047AB] focus:shadow-lg"
+          />
 
-          <button type="submit" className="save-button">Add Author</button>
+          {/* Buttons */}
+          <div className="flex justify-between mt-6 space-x-4">
+            <button
+              type="submit"
+              className="px-6 py-3 text-white font-bold uppercase bg-[#10263e] rounded-lg transition hover:bg-[#357ABD] hover:shadow-md hover:scale-105 active:scale-95"
+            >
+              Add Author
+            </button>
+          </div>
         </form>
 
         {/* Author List */}
-        <ul className="author-list">
-  {authors.length > 0 ? (
-    authors.map((author) => (
-      <li key={author._id} className="author-item">
-        <div className="author-content">
-          <img src={author.image} alt={author.name} className="author-image" />
-          <div className="author-text">
-            <h3>{author.name}</h3>
-            <p>{author.description}</p>
-            <p><strong>Notable Works:</strong> {author.notableWorks.join(", ")}</p>
-          </div>
-        </div>
-        <button className="delete-button" onClick={() => handleDelete(author._id)}>Delete</button>
-      </li>
-    ))
-  ) : (
-    <p>No authors added yet.</p>
-  )}
-
-
+        <ul className="w-full max-w-2xl mt-10 space-y-4">
+          {authors.length > 0 ? (
+            authors.map((author) => (
+              <li key={author._id} className="flex items-start bg-white/40 backdrop-blur-md p-5 rounded-lg shadow-lg">
+                <img src={author.image} alt={author.name} className="w-40 h-40 object-cover rounded-lg mr-6" />
+                <div className="flex-1 text-left">
+                  <h3 className="text-xl font-bold text-black">{author.name}</h3>
+                  <p className="text-gray-800">{author.description}</p>
+                  <p className="text-gray-900 font-semibold mt-2">
+                    <strong>Notable Works:</strong> {author.notableWorks.join(", ")}
+                  </p>
+                </div>
+                <button
+                  className="ml-4 px-4 py-2 bg-[#581988] text-white rounded-md font-bold transition hover:bg-[#876c8e]"
+                  onClick={() => handleDelete(author._id)}
+                >
+                  Delete
+                </button>
+              </li>
+            ))
+          ) : (
+            <p className="text-gray-700 text-lg">No authors added yet.</p>
+          )}
         </ul>
       </div>
     </div>

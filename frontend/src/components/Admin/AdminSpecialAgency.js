@@ -1,98 +1,6 @@
-// import React, { useEffect, useState } from "react";
-// import axios from "axios";
-// import Sidebar from "./Sidebar";  // Sidebar component
-// import "./AdminSpecialAgency.css"; // CSS file
-
-// const AdminSpecialAgency = () => {
-//   const [agencies, setAgencies] = useState([]);
-//   const [newAgency, setNewAgency] = useState({
-//     name: "",
-//     description: "",
-//     keyFeatures: "",
-//     partnerOrganizations: "",
-//     currentAssociates: "",
-//     contactDetails: { manager: "", address: "", phone: "", mobile: "", email: "" }
-//   });
-
-//   // ✅ Fetch Agencies
-//   useEffect(() => {
-//     axios.get("http://localhost:5001/api/home/special-agency")
-//       .then(response => setAgencies(response.data))
-//       .catch(error => console.error("Error fetching agencies:", error));
-//   }, []);
-
-//   // ✅ Handle Form Input
-//   const handleChange = (e) => {
-//     const { name, value } = e.target;
-//     setNewAgency((prev) => ({
-//       ...prev,
-//       [name]: value
-//     }));
-//   };
-
-//   // ✅ Add Agency
-//   const handleAddAgency = (e) => {
-//     e.preventDefault();
-//     axios.post("http://localhost:5001/api/home/admin/special-agency", newAgency)
-//       .then(response => {
-//         setAgencies([...agencies, response.data.agency]);
-//         setNewAgency({
-//           name: "",
-//           description: "",
-//           keyFeatures: "",
-//           partnerOrganizations: "",
-//           currentAssociates: "",
-//           contactDetails: { manager: "", address: "", phone: "", mobile: "", email: "" }
-//         });
-//       })
-//       .catch(error => console.error("Error adding agency:", error));
-//   };
-
-//   // ✅ Delete Agency
-//   const handleDelete = (id) => {
-//     axios.delete(`http://localhost:5001/api/home/admin/special-agency/${id}`)
-//       .then(() => setAgencies(agencies.filter(agency => agency._id !== id)))
-//       .catch(error => console.error("Error deleting agency:", error));
-//   };
-
-//   return (
-//     <div className="special-agency-page">
-//       <Sidebar />
-//       <div className="special-agency-container">
-//         <h2>Specialized Agencies Management</h2>
-
-//         {/* Display Agencies */}
-//         <section className="agency-list">
-//           {agencies.map(agency => (
-//             <div key={agency._id} className="agency-card">
-//               <h3>{agency.name}</h3>
-//               <p>{agency.description}</p>
-//               <button className="delete-button" onClick={() => handleDelete(agency._id)}>Delete</button>
-//             </div>
-//           ))}
-//         </section>
-
-//         {/* Add New Agency Form */}
-//         <section className="agency-form">
-//           <h3>Add New Agency</h3>
-//           <form onSubmit={handleAddAgency}>
-//             <input type="text" name="name" placeholder="Agency Name" onChange={handleChange} required />
-//             <input type="text" name="description" placeholder="Description" onChange={handleChange} required />
-//             <button type="submit" className="save-button">Add Agency</button>
-//           </form>
-//         </section>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default AdminSpecialAgency;
-
-
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Sidebar from "./Sidebar";
-import "./AdminSpecialAgency.css";
 
 const AdminSpecialAgency = () => {
   const [agencies, setAgencies] = useState([]);
@@ -112,7 +20,6 @@ const AdminSpecialAgency = () => {
     },
   });
 
-  // ✅ Fetch Agencies
   useEffect(() => {
     fetchAgencies();
   }, []);
@@ -124,7 +31,6 @@ const AdminSpecialAgency = () => {
       .catch((error) => console.error("Error fetching data:", error));
   };
 
-  // ✅ Handle Input Changes
   const handleChange = (e) => {
     const { name, value } = e.target;
     if (name.includes("contactDetails.")) {
@@ -138,7 +44,6 @@ const AdminSpecialAgency = () => {
     }
   };
 
-  // ✅ Add or Update Agency
   const handleSaveAgency = (e) => {
     e.preventDefault();
     const formattedData = {
@@ -172,7 +77,6 @@ const AdminSpecialAgency = () => {
     }
   };
 
-  // ✅ Delete Agency
   const handleDeleteAgency = (id) => {
     axios
       .delete(`http://localhost:5001/api/home/admin/special-agency/${id}`)
@@ -180,7 +84,6 @@ const AdminSpecialAgency = () => {
       .catch((error) => console.error("Error deleting agency:", error));
   };
 
-  // ✅ Edit Agency
   const handleEditAgency = (agency) => {
     setEditingAgency(agency);
     setAgencyData({
@@ -199,7 +102,6 @@ const AdminSpecialAgency = () => {
     });
   };
 
-  // ✅ Reset Form
   const resetForm = () => {
     setAgencyData({
       name: "",
@@ -218,54 +120,53 @@ const AdminSpecialAgency = () => {
   };
 
   return (
-    <div className="special-agency-page">
+    <div className="flex min-h-screen bg-[#d5d8dc]">
       <Sidebar />
-      <div className="special-agency-container">
-        <h3>Specialized Agencies Management</h3>
+      <div className="flex-1 flex flex-col items-center justify-center px-10 ml-[260px]">
+        <div className="w-full max-w-3xl bg-white/40 backdrop-blur-md border border-white/30 rounded-lg p-8 shadow-lg transition-all duration-500 hover:shadow-xl">
+          <h3 className="text-3xl font-bold text-black uppercase mb-6 text-center">
+            Specialized Agencies Management
+          </h3>
 
-        {/* ✅ List of Agencies */}
-        <section className="agency-list">
-          {agencies.map((agency) => (
-            <div key={agency._id} className="agency-card">
-              <div className="agency-info">
-                <h3>{agency.name}</h3>
+          {/* ✅ List of Agencies */}
+          <section className="w-full space-y-6">
+            {agencies.map((agency) => (
+              <div key={agency._id} className="bg-white/50 p-5 rounded-lg shadow-md hover:scale-105 hover:bg-white/70 transition duration-300">
+                <h3 className="text-xl font-semibold">{agency.name}</h3>
                 <p>{agency.description}</p>
-                <ul>
+                <ul className="mt-2">
                   {agency.keyFeatures.map((feature, index) => (
-                    <li key={index}>✅ {feature}</li>
+                    <li key={index} className="text-sm">✅ {feature}</li>
                   ))}
                 </ul>
-                <strong>Manager:</strong> {agency.contactDetails.manager} <br />
-                <strong>Address:</strong> {agency.contactDetails.address} <br />
-                <strong>Phone:</strong> {agency.contactDetails.phone} <br />
-              </div>
-              <button className="edit-button" onClick={() => handleEditAgency(agency)}>
-                Edit
-              </button>
-              <button className="delete-button" onClick={() => handleDeleteAgency(agency._id)}>
-                Delete
-              </button>
-            </div>
-          ))}
-        </section>
+                <p><strong>Manager:</strong> {agency.contactDetails.manager}</p>
+                <p><strong>Address:</strong> {agency.contactDetails.address}</p>
+                <p><strong>Phone:</strong> {agency.contactDetails.phone}</p>
+                <div className="flex space-x-4 mt-4">
+                  <button className="px-4 py-2 bg-[#581988] text-white rounded-md transition hover:bg-[#876c8e] hover:scale-105" onClick={() => handleEditAgency(agency)}>Edit</button>
+                  <button className="px-4 py-2 bg-[#004f4f] text-white rounded-md transition hover:bg-[#007a7a] hover:scale-105">
+  Delete
+</button>
 
-        {/* ✅ Add or Edit Agency Form */}
-        <section className="add-agency-section">
-          <h3>{editingAgency ? "Edit Agency" : "Add New Specialized Agency"}</h3>
-          <form onSubmit={handleSaveAgency}>
-            <input type="text" name="name" placeholder="Agency Name" value={agencyData.name} onChange={handleChange} required />
-            <textarea name="description" placeholder="Description" value={agencyData.description} onChange={handleChange} />
-            <input type="text" name="keyFeatures" placeholder="Key Features (comma-separated)" value={agencyData.keyFeatures} onChange={handleChange} />
-            <input type="text" name="partnerOrganizations" placeholder="Partner Organizations (comma-separated)" value={agencyData.partnerOrganizations} onChange={handleChange} />
-            <input type="text" name="currentAssociates" placeholder="Current Associates (comma-separated)" value={agencyData.currentAssociates} onChange={handleChange} />
-            <input type="text" name="contactDetails.manager" placeholder="Manager Name" value={agencyData.contactDetails.manager} onChange={handleChange} />
-            <input type="text" name="contactDetails.address" placeholder="Address" value={agencyData.contactDetails.address} onChange={handleChange} />
-            <input type="text" name="contactDetails.phone" placeholder="Phone" value={agencyData.contactDetails.phone} onChange={handleChange} />
-            <input type="text" name="contactDetails.mobile" placeholder="Mobile" value={agencyData.contactDetails.mobile} onChange={handleChange} />
-            <input type="text" name="contactDetails.email" placeholder="Emails (comma-separated)" value={agencyData.contactDetails.email} onChange={handleChange} />
-            <button type="submit" className="save-button">{editingAgency ? "Update" : "Add"}</button>
-          </form>
-        </section>
+                </div>
+              </div>
+            ))}
+          </section>
+
+          {/* ✅ Add or Edit Agency Form */}
+          <section className="mt-8">
+            <h3 className="text-2xl font-semibold text-black text-center mb-4">{editingAgency ? "Edit Agency" : "Add New Specialized Agency"}</h3>
+            <form onSubmit={handleSaveAgency} className="flex flex-col items-center space-y-4">
+              <input type="text" name="name" placeholder="Agency Name" value={agencyData.name} onChange={handleChange} required className="w-full p-3 border-2 border-[#75609c] rounded-lg bg-white text-black text-center outline-none transition focus:border-[#0047AB] focus:shadow-lg" />
+              <textarea name="description" placeholder="Description" value={agencyData.description} onChange={handleChange} className="w-full p-3 border-2 border-[#75609c] rounded-lg bg-white text-black text-center outline-none transition focus:border-[#0047AB] focus:shadow-lg"></textarea>
+              <input type="text" name="keyFeatures" placeholder="Key Features (comma-separated)" value={agencyData.keyFeatures} onChange={handleChange} className="w-full p-3 border-2 border-[#75609c] rounded-lg bg-white text-black text-center outline-none transition focus:border-[#0047AB] focus:shadow-lg" />
+              <input type="text" name="contactDetails.manager" placeholder="Manager Name" value={agencyData.contactDetails.manager} onChange={handleChange} className="w-full p-3 border-2 border-[#75609c] rounded-lg bg-white text-black text-center outline-none transition focus:border-[#0047AB] focus:shadow-lg" />
+              <button type="submit" className="px-6 py-3 text-white font-bold uppercase bg-[#10263e] rounded-lg transition hover:bg-[#357ABD] hover:shadow-md hover:scale-105 active:scale-95">
+                {editingAgency ? "Update" : "Add Agency"}
+              </button>
+            </form>
+          </section>
+        </div>
       </div>
     </div>
   );
