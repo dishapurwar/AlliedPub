@@ -22,20 +22,7 @@
   margin: 1rem 0; /* Margin above and below the quote */
 }
 
-.locations {
-  margin-top: 1rem; /* Margin above locations */
-}
 
-.location-list {
-  list-style: none; /* Remove default list styling */
-  padding-left: 0; /* Remove left padding */
-  color: #4A5568; /* Dark gray for location text */
-}
-
-.location-list li {
-  display: inline; /* Inline display for location items */
-  margin-right: 1rem; /* Margin to the right for spacing */
-}
 #about{
     background-color: #75609c;
     color: white;

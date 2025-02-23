@@ -21,6 +21,7 @@ import AdminExportInfo from "./components/Admin/AdminExportInfo";
 import AdminManagement from "./components/Admin/AdminManagement";
 import AdminPublisher from "./components/Admin/AdminPublisher";
 import AdminSpecialAgency from "./components/Admin/AdminSpecialAgency";
+import JournalPage from "./components/Journal/JournalPage";
 // import AdminDashboard from "./components/Admin/AdminDashboard";
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/about-us" element={<AboutUsPage />} />
         <Route path="/management" element={<Management />} />
+        <Route path="/journal" element={<JournalPage />} />
         <Route path="/all-authors" element={<AllAuthors />} />
         <Route path="/books" element={<BooksPage />} />
         <Route path="/admin/about-us" element={<AdminAboutUs />} />

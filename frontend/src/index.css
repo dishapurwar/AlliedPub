@@ -16,3 +16,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+/* Navbar Link Styling */
+.nav-link {
+  @apply text-gray-300 transition duration-300;
+}
+
+/* Hover Effect: Only Active Link Changes */
+.nav-link:hover {
+  @apply text-white bg-[#5a497a] px-3 py-2 rounded-md transition duration-300;
+}
