@@ -1,4 +1,5 @@
 import React from "react";
+import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import HomePage from "./components/Home/Home";
@@ -22,12 +23,21 @@ import AdminManagement from "./components/Admin/AdminManagement";
 import AdminPublisher from "./components/Admin/AdminPublisher";
 import AdminSpecialAgency from "./components/Admin/AdminSpecialAgency";
 import JournalPage from "./components/Journal/JournalPage";
+import Login from "./components/Login";
+import ForgotPassword from "./components/ForgotPassword";
+import Register from "./components/Register";
+import ResetPassword from "./components/ResetPassword";
 // import AdminDashboard from "./components/Admin/AdminDashboard";
 
 function App() {
+
+  const [user, setUser] = useState(null);
+
+
+
   return (
     <Router>
-      {/* <Navbar /> */}
+       {/* <Navbar user={user} handleLogout={handleLogout} /> */}
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/publisher" element={<DistributionPage />} />
@@ -50,6 +60,12 @@ function App() {
         <Route path="/admin/management" element={<AdminManagement />} />
         <Route path="/admin/publisher" element={<AdminPublisher />} />
         <Route path="/admin/special-agency" element={<AdminSpecialAgency />} />
+        <Route path="/login" element={<Login setUser={setUser} />} />
+
+        <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/reset-password/:token" element={<ResetPassword />} />
+
       </Routes>
     </Router>
   );

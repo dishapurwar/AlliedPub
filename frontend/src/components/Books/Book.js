@@ -468,7 +468,7 @@ const BooksPage = () => {
       <Navbar />
       <div className="flex flex-col md:flex-row gap-8 p-8 bg-gradient-to-br from-gray-100 to-gray-200 min-h-screen">
         {/* Sidebar */}
-        <div className="w-1/4 bg-gradient-to-b from-teal-600 to-teal-700 text-white p-5 rounded-xl shadow-lg h-fit sticky top-5">
+        <div className="w-1/4 bg-gradient-to-b from-teal-600 to-teal-700 text-white p-5 rounded-xl shadow-lg h-fit">
 
           <h2 className="text-2xl font-bold border-b-2 border-white pb-2">
             CATEGORIES

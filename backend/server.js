@@ -5,6 +5,7 @@ const connectDB = require("./config/db");
 
 // Routes Import
 const homeRoutes = require("./routes/homeRoutes");
+const authRoutes = require("./routes/authRoutes");
 
 dotenv.config();
 
@@ -29,7 +30,8 @@ app.get("/", (req, res) => {
 });
 
 // API Routes
-app.use("/api/home", homeRoutes);  // Home page routes for locations, books, and authors
+app.use("/api/home", homeRoutes);
+app.use("/api/auth", authRoutes);  // Home page routes for locations, books, and authors
 
 // Start Server
 const PORT = process.env.PORT || 5001;
