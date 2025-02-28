@@ -138,8 +138,11 @@ const Carousel = () => {
     if (currentIndex === 3) {
       // Redirect to the desired website if the third slide's button is clicked
       window.location.href = "https://www.eupheus.in";
-    } else {
-      navigate("/books"); // Navigate to the default route for other slides
+    } else if(currentIndex == 1) {
+      navigate("/general-tyles"); // Navigate to the default route for other slides
+    }
+    else{
+      navigate("/conf-prec-books");
     }
   };
 

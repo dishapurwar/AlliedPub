@@ -27,7 +27,10 @@ import Login from "./components/Login";
 import ForgotPassword from "./components/ForgotPassword";
 import Register from "./components/Register";
 import ResetPassword from "./components/ResetPassword";
+import GeneralTiles from "./components/GeneralTiles/GeneralTiles"; 
+import ConfPrecBooks from "./components/ConfPrecBooks/ConfPrecBooks";
 // import AdminDashboard from "./components/Admin/AdminDashboard";
+
 
 function App() {
 
@@ -65,7 +68,8 @@ function App() {
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/register" element={<Register />} />
         <Route path="/reset-password/:token" element={<ResetPassword />} />
-
+        <Route path="/general-tyles" element={<GeneralTiles />} />
+        <Route path="/conf-prec-books" element={<ConfPrecBooks />} />
       </Routes>
     </Router>
   );
